@@ -171,6 +171,11 @@ body.kp-open{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 #kik-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:21;max-width:min(92vw,520px);
   background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.92rem;box-shadow:var(--shadow)}
 .off-card .progress{margin:8px 0}
+.start-off{margin:14px 0 6px}
+.off-widget{margin:10px 0 14px}
+.off-widget .off-status{margin:0 0 4px;font-weight:700}
+.off-widget .progress{margin:6px 0}
+.off-widget .audio-btn{margin-top:4px}
 .off-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
 .off-list{padding-block:4px}
 .off-row{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
@@ -329,6 +334,7 @@ function viewPfad(){
     <p class="lead">Der rote Faden dieser App ist die <b>Offenbarungsreihenfolge</b> (Kairoer Standard-Chronologie): Du lernst die Suren so, wie Allah die erste Generation erzogen hat – Schritt für Schritt. Starte mit den Grundlagen, dann Lektion für Lektion.</p>
     <div class="progress" role="img" aria-label="Fortschritt ${pct}%"><div style="width:${pct}%"></div></div>
     <p class="lead" style="font-size:.9rem">${doneCount} von ${total} Lektionen abgeschlossen</p>
+    ${AUD.startCard ? AUD.startCard() : ""}
     <div class="grid" style="margin-top:14px">`;
   html += lessonCard("grundlagen", "٠", "Grundlagen", "Wie du den Koran im Kontext liest", window.GRUNDLAGEN.kurz, done.includes("grundlagen"), "Startmodul · vor Lektion 1 lesen");
   ALLE_LEKTIONEN.forEach(l=>{
@@ -539,6 +545,7 @@ function viewDua(){
     ${D.intro.map(p=>`<p class="lead">${esc(p)}</p>`).join("")}
     <div class="progress" role="img" aria-label="Gelernt"><div style="width:${Math.round(100*learned.filter(x=>alle.some(a=>a.id===x)).length/alle.length)}%"></div></div>
     <p class="lead" style="font-size:.9rem">${learned.filter(x=>alle.some(a=>a.id===x)).length} von ${alle.length} Duʿās als gelernt markiert</p>
+    ${AUD.offlineWidget && AUD.OFFLINE_OK ? `<div class="card start-off"><p style="margin-top:0"><b>Aussprache hören:</b> Tippe bei jeder Duʿā auf „▶ Aussprache anhören“. Zum Hören ohne Internet speichere alle Aufnahmen mit einem Klick:</p>${AUD.offlineWidget("duas")}</div>` : ""}
     <div class="controls"><input type="search" id="d-q" placeholder="Duʿā suchen (z. B. Schlaf, Reise, Sorge) …" value="${esc(state.dq)}"></div>
     <div class="chips"><button type="button" class="chip ${state.dkat==="alle"?"on":""}" data-dkat="alle">Alle</button>${
       D.kategorien.map(k=>`<button type="button" class="chip ${state.dkat===k.id?"on":""}" data-dkat="${k.id}">${esc(k.titel)}</button>`).join("")}</div>
@@ -572,7 +579,7 @@ function duaList(q, learned){
         <p class="dua-de">„${esc(d.de)}“</p>
         ${d.nutzen?`<p class="dua-nutzen">${esc(d.nutzen)}</p>`:""}
         <p class="dua-q">Quelle: ${esc(d.quelle)}</p>
-        <div class="dua-foot">${d.ref?AUD.verseRangeActions(d.ref, d.id):"<span></span>"}
+        <div class="dua-foot">${AUD.duaActions ? AUD.duaActions(d) : "<span></span>"}
           <button type="button" class="dua-learn" data-learn="${d.id}">${isL?"✓ Gelernt":"Als gelernt markieren"}</button></div>
       </div>`;
     });

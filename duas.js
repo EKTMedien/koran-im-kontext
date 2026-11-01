@@ -30,6 +30,7 @@ window.DUAS = {
 "nutzen": "„Sprich sie morgens und abends dreimal – sie genügen dir gegen alles.“ Mehr dazu in den Lektionen 20–22.",
 "wdh": "3× morgens, 3× abends",
 "arab": "بسم الله الرحمن الرحيم قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ. بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ. بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَ النَّاسِ",
+"audio_voll": true,
 "hisn": 76
 },
 {
@@ -41,6 +42,7 @@ window.DUAS = {
 "nutzen": "Abends: „Amsaina wa amsa l-mulku lillah …“ und „Rabbi as’aluka chaira ma fi hadhihi l-laila wa chaira ma ba‘daha, wa a‘udhu bika min scharri ma fi hadhihi l-laila wa scharri ma ba‘daha …“",
 "wdh": "1× morgens (abends in der Abendform)",
 "arab": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيرَ مَا بَعْدَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
+"audio_voll": true,
 "hisn": 77
 },
 {
@@ -52,6 +54,7 @@ window.DUAS = {
 "nutzen": "Abends: „Allahumma bika amsaina, wa bika asbahna, wa bika nahja, wa bika namutu wa ilaika l-masir“ – … und zu Dir ist die Heimkehr.",
 "wdh": "1× morgens (abends in der Abendform)",
 "arab": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا ، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ",
+"audio_voll": true,
 "hisn": 78
 },
 {
@@ -74,6 +77,7 @@ window.DUAS = {
 "nutzen": "Abends: „Allahumma inni amsaitu uschhiduka …“. Nach der Überlieferung befreit Allah den, der es viermal spricht, vom Feuer.",
 "wdh": "4× morgens, 4× abends",
 "arab": "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ، وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلاَئِكَتِكَ، وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ، وَأَنَّ مُحَمَّداً عَبْدُكَ وَرَسُولُكَ",
+"audio_voll": true,
 "hisn": 80
 },
 {
@@ -85,6 +89,7 @@ window.DUAS = {
 "nutzen": "Abends: „Allahumma ma amsa bi …“. Wer es morgens spricht, hat nach der Überlieferung den Dank für seinen Tag erfüllt.",
 "wdh": "1× morgens (abends in der Abendform)",
 "arab": "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
+"audio_voll": true,
 "hisn": 81
 },
 {
@@ -95,6 +100,7 @@ window.DUAS = {
 "quelle": "Abū Dāwūd, Nr. 5090 (ḥasan)",
 "wdh": "3× morgens, 3× abends",
 "arab": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ",
+"audio_voll": true,
 "hisn": 82
 },
 {
@@ -106,6 +112,7 @@ window.DUAS = {
 "nutzen": "Der Wortlaut ist Koran 9:129. Nach der Überlieferung genügt Allah dem, der es siebenmal spricht, in allem, was ihn bekümmert.",
 "wdh": "7× morgens, 7× abends",
 "arab": "حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+"audio_voll": true,
 "hisn": 83
 },
 {
@@ -139,6 +146,7 @@ window.DUAS = {
 "nutzen": "Wer es dreimal spricht, dem schadet nach dem Hadith nichts Plötzliches bis zum Abend – und abends gesprochen bis zum Morgen.",
 "wdh": "3× morgens, 3× abends",
 "arab": "بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلاَ فِي السّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+"audio_voll": true,
 "hisn": 86
 },
 {
@@ -150,6 +158,7 @@ window.DUAS = {
 "nutzen": "Wer es spricht, dem steht nach der Überlieferung zu, dass Allah ihn am Tag der Auferstehung zufriedenstellt. Ein ähnlicher Wortlaut nach dem Gebetsruf steht in Sahih Muslim, Nr. 386.",
 "wdh": "3× morgens, 3× abends",
 "arab": "رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً",
+"audio_voll": true,
 "hisn": 87
 },
 {
@@ -172,6 +181,7 @@ window.DUAS = {
 "nutzen": "Abends: „Amsaina wa amsa l-mulku lillahi rabbi l-‘alamin. Allahumma inni as’aluka chaira hadhihi l-laila: fathaha, wa nasraha, wa nuraha, wa barakataha, wa hudaha …“",
 "wdh": "1× morgens (abends in der Abendform)",
 "arab": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ، اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ:فَتْحَهُ، وَنَصْرَهُ، وَنورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيهِ وَشَرِّ مَا بَعْدَهُ",
+"audio_voll": true,
 "hisn": 89
 },
 {
@@ -183,6 +193,7 @@ window.DUAS = {
 "nutzen": "Abends: „Amsaina ‘ala fitrati l-islam …“. Passt zu Lektion 39 (Ur-Bund und Fiṭra) und Lektion 22 (Ichlāṣ).",
 "wdh": "1× morgens (abends in der Abendform)",
 "arab": "أَصْبَحْنا عَلَى فِطْرَةِ الْإِسْلاَمِ، وَعَلَى كَلِمَةِ الْإِخْلاَصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صلى الله عليه وسلم، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ، حَنِيفاً مُسْلِماً وَمَا كَانَ مِنَ الْمُشرِكِينَ",
+"audio_voll": true,
 "hisn": 90
 },
 {
@@ -194,6 +205,7 @@ window.DUAS = {
 "nutzen": "Wer es morgens und abends hundertmal spricht, mit dem kommt am Tag der Auferstehung niemand mit Besserem – außer wer Gleiches oder mehr gesprochen hat. Seine Sünden werden getilgt, auch wenn sie wie der Meeresschaum wären.",
 "wdh": "100× morgens, 100× abends",
 "arab": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+"audio_voll": true,
 "hisn": 91
 },
 {
@@ -205,6 +217,7 @@ window.DUAS = {
 "nutzen": "Zehnmal gesprochen ist es, als hätte man vier Nachkommen Ismāʿīls aus der Sklaverei befreit. Hundertmal am Tag: Lohn wie zehn befreite Sklaven, hundert gute Taten, hundert getilgte Sünden und Schutz vor dem Satan bis zum Abend.",
 "wdh": "10× am Tag (1× bei Trägheit); 100× morgens",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+"audio_voll": true,
 "hisn": 92
 },
 {
@@ -216,6 +229,7 @@ window.DUAS = {
 "nutzen": "Der Prophet ﷺ sagte zu Dschuwairija, die vom Fadschr bis zum Vormittag im Dhikr gesessen hatte: Diese vier Sätze, dreimal gesprochen, wiegen alles auf, was du seit dem Morgen gesagt hast.",
 "wdh": "3× morgens",
 "arab": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ",
+"audio_voll": true,
 "hisn": 94
 },
 {
@@ -227,6 +241,7 @@ window.DUAS = {
 "nutzen": "Die Duʿā für jeden Lern- und Arbeitstag – passend zu Lektion 1 (Wissen) und Lektion 9 (Geben aus guter Versorgung).",
 "wdh": "1× morgens (nach dem Fadschr-Gebet)",
 "arab": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نَافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً",
+"audio_voll": true,
 "hisn": 95
 },
 {
@@ -238,6 +253,7 @@ window.DUAS = {
 "nutzen": "Wer es abends spricht, dem schadet in dieser Nacht nach dem Hadith kein Skorpionstich. Auch beim Haltmachen an einem fremden Ort zu sprechen.",
 "wdh": "3× abends",
 "arab": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+"audio_voll": true,
 "hisn": 97
 },
 {
@@ -249,6 +265,7 @@ window.DUAS = {
 "nutzen": "Wer einmal Segen auf den Propheten ﷺ spricht, über den spricht Allah zehnmal Segen. Für zehnmal morgens und abends wird seine Fürsprache verheißen.",
 "wdh": "10× morgens, 10× abends",
 "arab": "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ",
+"audio_voll": true,
 "hisn": 98
 }
 ]
@@ -666,6 +683,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 611; Sahih Muslim, Nr. 385",
 "nutzen": "Sprich dem Muezzin jeden Satz leise nach – nur bei „Hayya ‘ala s-salah“ und „Hayya ‘ala l-falah“ antwortest du mit diesem Satz. Hanafitisch ist das Nachsprechen empfohlen (mustahabb); die eigentliche Antwort auf den Ruf ist, zum Gebet zu gehen.",
 "arab": "لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ",
+"audio_voll": true,
 "hisn": 22
 },
 {
@@ -676,6 +694,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 386",
 "nutzen": "Wer dies spricht, wenn der Muezzin das Glaubensbekenntnis ruft, dem werden seine Sünden vergeben.",
 "arab": "وَأَنَا أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ، رَضِيتُ بِاللَّهِ رَبَّاً، وَبِمُحَمَّدٍ رَسُولاً، وَبِالْإِسْلاَمِ دِينَاً",
+"audio_voll": true,
 "hisn": 23
 },
 {
@@ -686,6 +705,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 614; die Ṣalawāt davor: Sahih Muslim, Nr. 384; der Zusatz in eckigen Klammern: al-Baihaqī (Kette umstritten)",
 "nutzen": "Zuerst die Ṣalawāt auf den Propheten ﷺ sprechen, dann diese Duʿā – wer sie spricht, dem wird seine Fürsprache am Tag der Auferstehung zuteil. Danach für dich selbst bitten: Die Duʿā zwischen Adhān und Iqāma wird nicht zurückgewiesen (Sunan Abū Dāwūd, Nr. 521; at-Tirmidhī, Nr. 212).",
 "arab": "اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلاَةِ الْقَائِمَةِ، آتِ مُحَمَّداً الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامَاً مَحمُوداً الَّذِي وَعَدْتَهُ، [إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ]",
+"audio_voll": true,
 "hisn": 25
 },
 {
@@ -727,6 +747,7 @@ window.DUAS = {
 "nutzen": "Als „Fa-sabbih bismi rabbika l-‘azim“ (56:74) herabkam, sagte der Prophet ﷺ: „Macht es in eure Verbeugung.“ Hanafitisch ist dieses Tasbīḥ Sunna, mindestens dreimal; eine ungerade Zahl wie fünf oder sieben ist besser, der Imam soll es aber nicht in die Länge ziehen.",
 "wdh": "3×",
 "arab": "سُبْحانَ رَبِّيَ الْعَظِيمِ",
+"audio_voll": true,
 "hisn": 33
 },
 {
@@ -778,6 +799,7 @@ window.DUAS = {
 "nutzen": "Als „Sabbihi sma rabbika l-a‘la“ (87:1) herabkam, sagte der Prophet ﷺ: „Macht es in eure Niederwerfung.“ Hanafitisch Sunna, mindestens dreimal (vgl. Lektion 8).",
 "wdh": "3×",
 "arab": "سُبْحَانَ رَبِّيَ الأَعْلَى",
+"audio_voll": true,
 "hisn": 41
 },
 {
@@ -889,6 +911,7 @@ window.DUAS = {
 "nutzen": "Nach dem Gebet zuerst um Vergebung bitten – für die Mängel im eben verrichteten Gebet.",
 "wdh": "3×",
 "arab": "أَسْتَغْفِرُ اللَّهَ",
+"audio_voll": true,
 "hisn": 66
 },
 {
@@ -899,6 +922,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 591–592",
 "nutzen": "Hanafitisch: Nach Pflichtgebeten, denen ein Sunna-Gebet folgt (Ẓuhr, Maghrib, ʿIschāʾ), spricht man kurz diese Worte und steht dann zur Sunna auf – ʿĀʾischa: Er blieb nur so lange sitzen. Die längeren Adhkār folgen danach.",
 "arab": "اللَّهُمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلاَمُ، تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَالْإِكْرَامِ",
+"audio_voll": true,
 "hisn": 66
 },
 {
@@ -939,6 +963,7 @@ window.DUAS = {
 "quelle": "an-Nasāʾī, as-Sunan al-kubrā (Abū Umāma); von al-Albānī als sahih eingestuft",
 "nutzen": "Wer sie nach jedem Pflichtgebet rezitiert, den trennt nur der Tod vom Eintritt ins Paradies.",
 "arab": "اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+"audio_voll": true,
 "hisn": 71,
 "ref": "2:255"
 },
@@ -950,6 +975,7 @@ window.DUAS = {
 "quelle": "Sunan Abū Dāwūd, Nr. 1523; at-Tirmidhī, Nr. 2903",
 "nutzen": "Nach jedem Gebet einmal; morgens und abends je dreimal (siehe Morgen & Abend). Vgl. Lektionen 20–22.",
 "arab": "بسم الله الرحمن الرحيم قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ، بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ،بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَ النَّاسِ",
+"audio_voll": true,
 "hisn": 70
 },
 {
@@ -961,6 +987,7 @@ window.DUAS = {
 "nutzen": "Nach dem Fadschr-Gebet noch im Sitzen, bevor man spricht: Für jedes Mal werden zehn gute Taten geschrieben und zehn schlechte getilgt, und man ist den Tag über vor dem Satan geschützt.",
 "wdh": "10× nach Fadschr und Maghrib",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+"audio_voll": true,
 "hisn": 72
 },
 {
@@ -970,6 +997,7 @@ window.DUAS = {
 "de": "O Allah, ich bitte Dich um nützliches Wissen, gute (erlaubte) Versorgung und Taten, die angenommen werden.",
 "quelle": "Ibn Mādscha, Nr. 925 (sahih)",
 "arab": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً",
+"audio_voll": true,
 "hisn": 73
 },
 {
@@ -1000,6 +1028,7 @@ window.DUAS = {
 "nutzen": "Beim dritten Mal hob der Prophet ﷺ die Stimme; in einer Überlieferung mit dem Zusatz „Rabbi l-mala’ikati war-ruh“ (Herr der Engel und des Geistes).",
 "wdh": "3×, beim dritten Mal laut und gedehnt",
 "arab": "سُبْحَانَ المَلِكِ القُدُّوسِ",
+"audio_voll": true,
 "hisn": 119
 },
 {
@@ -1010,6 +1039,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1162",
 "nutzen": "Zwei freiwillige Rakʿa (nicht in den verbotenen Zeiten), danach diese Duʿā. Hanafitische Werke (Ibn ʿĀbidīn) empfehlen, sie bei Bedarf bis zu siebenmal zu wiederholen – gestützt auf eine schwache Überlieferung; danach handelt man nach dem, wozu das Herz sich öffnet. Ein Traum ist nicht nötig, und auch kundige Menschen um Rat zu fragen gehört dazu (3:159).",
 "arab": "اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ العَظِيمِ؛ فَإِنَّكَ تَقْدِرُ وَلاَ أَقْدِرُ، وَتَعْلَمُ وَلاَ أَعْلَمُ، وَأَنْتَ عَلاَّمُ الغُيُوبِ، اللَّهُمَّ إِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأمْرَ - وَيُسَمِّي حَاجَتَهُ - خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي – أَوْ قَالَ: عَاجِلِهِ وَآجِلِهِ - فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الْأَمْرَ شَرٌّ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي – أَوْ قَالَ: عَاجِلِهِ وَآجِلِهِ – فَاصْرِفْهُ عَنِّي وَاصْرِفْنِي عَنْهُ وَاقْدُرْ لِيَ الْخَيْرَ حَيْثُ كَانَ، ثُمَّ أَرْضِنِي بِهِ",
+"audio_voll": true,
 "hisn": 74
 }
 ]
@@ -1028,6 +1058,7 @@ window.DUAS = {
 "nutzen": "Die Hände zusammenlegen, hineinhauchen, die drei Suren rezitieren und dann über den Körper streichen, so weit man kommt – beginnend mit Kopf, Gesicht und Vorderseite. Das Ganze dreimal.",
 "wdh": "3× vor dem Schlafen",
 "arab": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ. بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ. بسم الله الرحمن الرحيم قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَ النَّاسِ",
+"audio_voll": true,
 "hisn": 99
 },
 {
@@ -1210,6 +1241,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 142; Sahih Muslim, Nr. 375; das Bismillah als Zusatz bei Sa‘id ibn Mansur",
 "nutzen": "Vor dem Betreten sprechen und mit dem linken Fuß hineingehen. Hanafitisch spricht man im WC selbst keinen Dhikr – darum vorher.",
 "arab": "[بِسْمِ اللَّهِ] اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبائِث",
+"audio_voll": true,
 "hisn": 10
 },
 {
@@ -1220,6 +1252,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 30; Sunan at-Tirmidhi, Nr. 7",
 "nutzen": "Mit dem rechten Fuß heraustreten.",
 "arab": "غُفْرَانَكَ",
+"audio_voll": true,
 "hisn": 11
 },
 {
@@ -1230,6 +1263,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 101 (u. a.)",
 "nutzen": "Hanafitisch ist das Bismillah vor dem Wudu Sunna, keine Pflicht – wer es vergisst, dessen Wudu ist trotzdem gültig.",
 "arab": "بِسْمِ اللَّهِ",
+"audio_voll": true,
 "hisn": 12
 },
 {
@@ -1240,6 +1274,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 234",
 "nutzen": "Wer nach vollständigem Wudu so spricht, dem werden die acht Tore des Paradieses geöffnet – er tritt ein, durch welches er will.",
 "arab": "أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ",
+"audio_voll": true,
 "hisn": 13
 },
 {
@@ -1260,6 +1295,7 @@ window.DUAS = {
 "quelle": "an-Nasa’i, ‘Amal al-jaum wa l-laila (sahih nach al-Albani)",
 "nutzen": "Nach dem Wudu gesprochen, wird sie nach der Überlieferung versiegelt und bis zum Tag der Auferstehung bewahrt.",
 "arab": "سُبْحانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَسْتَغْفِرُكَ وَأَتوبُ إِلَيْكَ",
+"audio_voll": true,
 "hisn": 15
 },
 {
@@ -1270,6 +1306,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 5095; Sunan at-Tirmidhi, Nr. 3426",
 "nutzen": "Wer das spricht, dem wird gesagt: Du bist rechtgeleitet, dir ist genügt, und du bist beschützt – und der Satan weicht von ihm.",
 "arab": "بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَاَ حَوْلَ وَلَا قُوَّةَ إِلاَّ بِاللَّهِ",
+"audio_voll": true,
 "hisn": 16
 },
 {
@@ -1280,6 +1317,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 5094; Sunan at-Tirmidhi, Nr. 3427",
 "nutzen": "Umm Salama berichtet: Der Prophet ﷺ verließ ihr Haus nie, ohne den Blick zum Himmel zu heben und dies zu sprechen.",
 "arab": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أَضِلَّ، أَوْ أُضَلَّ، أَوْ أَزِلَّ، أَوْ أُزَلَّ، أَوْ أَظْلِمَ، أَوْ أُظْلَمَ، أَوْ أَجْهَلَ، أَوْ يُجْهَلَ عَلَيَّ",
+"audio_voll": true,
 "hisn": 17
 },
 {
@@ -1290,6 +1328,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 5096 (Kette von manchen als schwach eingestuft); zum Gedenken beim Eintreten: Sahih Muslim, Nr. 2018",
 "nutzen": "Danach die Familie mit Salam grüßen. Wer beim Eintreten und beim Essen Allahs gedenkt, über den sagt der Satan zu seinen Gefährten: Hier gibt es für euch weder Nachtlager noch Abendessen (Muslim 2018).",
 "arab": "بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا",
+"audio_voll": true,
 "hisn": 18
 },
 {
@@ -1300,6 +1339,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6316; Sahih Muslim, Nr. 763",
 "nutzen": "Der Prophet ﷺ sprach es auf dem Weg zum Fadschr-Gebet. Hier gekürzt – die lange Fassung bittet zusätzlich um Licht in Nerven, Fleisch, Blut, Haar und Haut.",
 "arab": "اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُوراً، وَفِي لِسَانِي نُوراً، وَفِي سَمْعِي نُوراً، وَفِي بَصَرِي نُوراً، وَمِنْ فَوْقِي نُوراً، وَمِنْ تَحْتِي نُوراً، وَعَنْ يَمِينِي نُوراً، وَعَنْ شِمَالِي نُوراً، وَمِنْ أَمَامِي نُوراً، وَمِنْ خَلْفِي نُوراً، وَاجْعَلْ فِي نَفْسِي نُوراً، وَأَعْظِمْ لِي نُوراً، وَعَظِّم لِي نُوراً، وَاجْعَلْ لِي نُوراً، وَاجْعَلْنِي نُوراً",
+"audio_voll": true,
 "hisn": 19
 },
 {
@@ -1310,6 +1350,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 466 und 465; Sahih Muslim, Nr. 713",
 "nutzen": "Mit dem rechten Fuß eintreten. Über den, der die Zufluchtsformel spricht, sagt der Satan: Er ist den ganzen Tag vor mir geschützt (Abu Dawud 466). Hanafitisch empfohlen: danach zwei Rak‘a Tahijjat al-Masdschid, außer in den verpönten Zeiten.",
 "arab": "أَعُوذُ بِاللَّهِ العَظِيمِ، وَبِوَجْهِهِ الْكَرِيمِ، وَسُلْطَانِهِ الْقَدِيمِ، مِنَ الشَّيْطَانِ الرَّجِيمِ [بِسْمِ اللَّهِ، وَالصَّلَاةُ] [وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ] اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+"audio_voll": true,
 "hisn": 20
 },
 {
@@ -1320,6 +1361,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 713; Sunan Ibn Madscha, Nr. 773 (Schutz vor dem Satan)",
 "nutzen": "Mit dem linken Fuß hinausgehen. Hinein bittet man um Barmherzigkeit, hinaus um Huld (fadl) – die Versorgung für den Alltag draußen.",
 "arab": "بِسْمِ اللَّهِ وَالصّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِك، اللَّهُمَّ اعْصِمْنِي مِنَ الشَّيْطَانِ الرَّجِيمِ",
+"audio_voll": true,
 "hisn": 21
 },
 {
@@ -1329,6 +1371,7 @@ window.DUAS = {
 "de": "O Allah, Dir gebührt der Lobpreis, Du hast mich damit bekleidet. Ich bitte Dich um sein Gutes und das Gute, wofür es gemacht wurde, und nehme Zuflucht bei Dir vor seinem Übel und dem Übel, wofür es gemacht wurde.",
 "quelle": "Sunan Abu Dawud, Nr. 4020; Sunan at-Tirmidhi, Nr. 1767",
 "arab": "اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
+"audio_voll": true,
 "hisn": 6
 },
 {
@@ -1339,6 +1382,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 4023 (hasan nach al-Albani)",
 "nutzen": "Nach der Überlieferung werden dem, der es spricht, seine vergangenen (kleinen) Sünden vergeben.",
 "arab": "الْحَمْدُ للَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّة",
+"audio_voll": true,
 "hisn": 5
 }
 ]
@@ -1356,6 +1400,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 3767; Sunan at-Tirmidhi, Nr. 1858; vgl. Sahih al-Buchari, Nr. 5376",
 "nutzen": "Der Prophet ﷺ zu einem Jungen: „Sprich Allahs Namen, iss mit der rechten Hand und iss von dem, was vor dir liegt“ (Buchari 5376).",
 "arab": "بِسْمِ اللَّهِ",
+"audio_voll": true,
 "hisn": 178
 },
 {
@@ -1366,6 +1411,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 3767; Sunan at-Tirmidhi, Nr. 1858",
 "nutzen": "Wer es am Anfang des Essens vergessen hat, sagt es, sobald er sich erinnert.",
 "arab": "بسمِ اللَّهِ فِي أَوَّلِهِ وَآخِرِهِ",
+"audio_voll": true,
 "hisn": 178
 },
 {
@@ -1376,6 +1422,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3455 (hasan); Sunan Abu Dawud, Nr. 3730",
 "nutzen": "Bei Milch sagt man stattdessen: Allahumma barik lana fihi wa zidna minh – „und gib uns mehr davon“.",
 "arab": "اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَأَطْعِمْنَا خَيْراً مِنْهُ",
+"audio_voll": true,
 "hisn": 179
 },
 {
@@ -1386,6 +1433,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3458; Sunan Abu Dawud, Nr. 4023 (hasan)",
 "nutzen": "Nach der Überlieferung werden dem, der es spricht, seine vorangegangenen (kleinen) Sünden vergeben.",
 "arab": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ، مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ",
+"audio_voll": true,
 "hisn": 180
 },
 {
@@ -1396,6 +1444,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 5458",
 "nutzen": "Der Prophet ﷺ sprach es, wenn das Essen abgeräumt wurde.",
 "arab": "الْحَمْدُ لِلَّهِ حَمْداً كَثِيراً طَيِّباً مُبَارَكاً فِيهِ، غَيْرَ [مَكْفِيٍّ وَلاَ ] مُوَدَّعٍ، وَلاَ مُسْتَغْنَىً عَنْهُ رَبَّنَا",
+"audio_voll": true,
 "hisn": 181
 },
 {
@@ -1405,6 +1454,7 @@ window.DUAS = {
 "de": "O Allah, segne ihnen, womit Du sie versorgt hast, vergib ihnen und erbarme Dich ihrer.",
 "quelle": "Sahih Muslim, Nr. 2042",
 "arab": "اللَّهُمَّ بَارِكْ لَهُمْ فِيمَا رَزَقْتَهُم، وَاغْفِرْ لَهُمْ وَارْحَمْهُمْ",
+"audio_voll": true,
 "hisn": 182
 },
 {
@@ -1414,6 +1464,7 @@ window.DUAS = {
 "de": "Mögen Fastende bei euch ihr Fasten brechen, Fromme euer Essen essen und die Engel für euch um Segen bitten.",
 "quelle": "Sunan Abu Dawud, Nr. 3854; Sunan Ibn Madscha, Nr. 1747",
 "arab": "أَفْطَرَ عِنْدَكُمُ الصَّائِمُونَ، وَأَكَلَ طَعَامَكُمُ الْأَبْرَارُ، وَصَلَّتْ عَلَيْكُمُ الْمَلاَئِكَةُ",
+"audio_voll": true,
 "hisn": 184
 },
 {
@@ -1424,6 +1475,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 2357 (hasan)",
 "nutzen": "Nach dem ersten Schluck beim Iftar. Das verbreitete „Allahumma laka sumtu …“ ist nur mursal (schwach) überliefert (Abu Dawud 2358) – diese Formel ist die besser belegte.",
 "arab": "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ العُرُوقُ، وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
+"audio_voll": true,
 "hisn": 176
 },
 {
@@ -1434,6 +1486,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1894; Sahih Muslim, Nr. 1151",
 "nutzen": "Statt zurückzuschimpfen: Das Fasten ist ein Schutzschild – auch für die Zunge.",
 "arab": "إِنِّي صَائِمٌ، إِنِّي صَائِمٌ",
+"audio_voll": true,
 "hisn": 186
 }
 ]
@@ -1451,6 +1504,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 2602; Sunan at-Tirmidhi, Nr. 3446",
 "nutzen": "Beim Einsteigen in Auto, Bus, Zug oder Flugzeug. ‘Ali sprach es und lachte – auch der Prophet ﷺ habe gelacht: Allah freut sich, wenn Sein Diener weiß, dass niemand außer Ihm Sünden vergibt. Der Mittelteil ist Koran 43:13–14.",
 "arab": "بِسْمِ اللَّهِ، وَالْحَمْدُ للَّهِ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنقَلِبُونَ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، الْحَمْدُ لِلَّهِ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي؛ فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ",
+"audio_voll": true,
 "hisn": 206
 },
 {
@@ -1461,6 +1515,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 1342",
 "nutzen": "Zu Beginn jeder Reise. Bei der Rückkehr ergänzt man: Ayibuna, ta’ibuna, ‘abiduna, li-rabbina hamidun (siehe „Bei der Heimkehr“).",
 "arab": "اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ۝ وَإِنَّا إِلَى رَبِّنَا لَمُنقَلِبُونَ اللَّهُمَّ إِنّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا البِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِ عَنَّا بُعْدَهُ، اللَّهُمَّ أَنْتَ الصَّاحِبُ فِي السَّفَرِ، وَالْخَليفَةُ فِي الْأَهْلِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ، وَكَآبَةِ الْمَنْظَرِ، وَسُوءِ الْمُنْقَلَبِ فِي الْمَالِ وَالْأَهْلِ",
+"audio_voll": true,
 "hisn": 207
 },
 {
@@ -1471,6 +1526,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1797; Sahih Muslim, Nr. 1344",
 "nutzen": "Auf jeder Anhöhe dreimal „Allahu akbar“, dann diese Worte. Die letzte Zeile erinnert an die Grabenschlacht (siehe Lektion zu Al-Ahzab).",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنا حَامِدُونَ، صَدَقَ اللَّهُ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزابَ وَحْدَهُ",
+"audio_voll": true,
 "hisn": 217
 },
 {
@@ -1480,6 +1536,7 @@ window.DUAS = {
 "de": "O Allah, Herr der sieben Himmel und dessen, was sie überschatten, Herr der sieben Erden und dessen, was sie tragen, Herr der Satane und dessen, was sie irreführen, Herr der Winde und dessen, was sie verwehen: Ich bitte Dich um das Gute dieser Ortschaft, das Gute ihrer Bewohner und das Gute dessen, was in ihr ist, und nehme Zuflucht bei Dir vor ihrem Übel, dem Übel ihrer Bewohner und dem Übel dessen, was in ihr ist.",
 "quelle": "an-Nasa’i, as-Sunan al-kubra; al-Hakim, al-Mustadrak (als hasan eingestuft)",
 "arab": "اللَّهُمَّ رَبَّ السَّمَوَاتِ السَّبْعِ وَمَا أَظْلَلْنَ، وَرَبَّ الأَرَضِينَ السَّبْعِ وَمَا أَقْلَلْنَ، وَرَبَّ الشَّياطِينِ وَمَا أَضْلَلْنَ، وَرَبَّ الرِّيَاحِ وَمَا ذَرَيْنَ، أَسْأَلُكَ خَيْرَ هَذِهِ الْقَرْيَةِ، وَخَيْرَ أَهْلِهَا، وَخَيْرَ مَا فِيهَا، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ أَهْلِهَا، وَشَرِّ مَا فِيهَا",
+"audio_voll": true,
 "hisn": 208
 },
 {
@@ -1490,6 +1547,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3428; Sunan Ibn Madscha, Nr. 2235 – Kette umstritten (al-Albani: hasan)",
 "nutzen": "Beim Betreten eines Marktes oder Einkaufszentrums – dort, wo die meisten Menschen Allah vergessen. Überlieferter Lohn: eine Million gute Taten.",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لاِ يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+"audio_voll": true,
 "hisn": 209
 },
 {
@@ -1499,6 +1557,7 @@ window.DUAS = {
 "de": "Ich vertraue Allah deine Religion, das dir Anvertraute und den Abschluss deiner Taten an.",
 "quelle": "Sunan Abu Dawud, Nr. 2600; Sunan at-Tirmidhi, Nr. 3443",
 "arab": "أَسْتَوْدِعُ اللَّهَ دِينَكَ، وَأَمَانَتَكَ، وَخَوَاتِيمَ عَمَلِكَ",
+"audio_voll": true,
 "hisn": 212
 },
 {
@@ -1508,6 +1567,7 @@ window.DUAS = {
 "de": "Allah gebe dir Gottesfurcht als Reiseproviant, vergebe dir deine Sünde und mache dir das Gute leicht, wo immer du bist.",
 "quelle": "Sunan at-Tirmidhi, Nr. 3444 (hasan)",
 "arab": "زَوَّدَكَ اللَّهُ التَّقْوَى، وَغَفَرَ ذَنْبَكَ، وَيَسَّرَ لَكَ الخَيْرَ حَيْثُ ما كُنْتَ",
+"audio_voll": true,
 "hisn": 213
 },
 {
@@ -1518,6 +1578,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 2708",
 "nutzen": "Wer an einem Ort absteigt (Hotel, Rastplatz, neue Wohnung) und dies spricht, dem schadet nichts, bis er von dort weiterzieht.",
 "arab": "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+"audio_voll": true,
 "hisn": 216
 }
 ]
@@ -1655,6 +1716,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 134 (vgl. Sahih al-Buchari, Nr. 3276)",
 "nutzen": "Wenn sich Gedanken aufdrängen wie „Wer hat Allah erschaffen?“: Zuflucht bei Allah nehmen, aufhören, dem Gedanken zu folgen, und diesen Satz sprechen. Dass dich solche Gedanken stören, ist laut dem Propheten ﷺ ein Zeichen klaren Glaubens (vgl. Lektion 21).",
 "arab": "آمَنْتُ بِاللَّهِ وَرُسُلِهِ",
+"audio_voll": true,
 "hisn": 134
 },
 {
@@ -1665,6 +1727,7 @@ window.DUAS = {
 "quelle": "Koran 57:3; Sunan Abū Dāwūd, Nr. 5110 (hasan)",
 "nutzen": "Koran 57:3. Ibn ʿAbbās riet einem, der von Zweifeln geplagt wurde, diesen Vers zu sprechen: Vor dem Ersten ist nichts – damit endet jede „Und wer davor?“-Schleife.",
 "arab": "هُوَ الْأوَّلُ وَالْآخِرُ وَالظّاهِرُ وَالْباطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ",
+"audio_voll": true,
 "hisn": 135
 },
 {
@@ -1676,6 +1739,7 @@ window.DUAS = {
 "nutzen": "Der Prophet ﷺ lehrte das ʿUthmān ibn Abī l-ʿĀṣ, der über Störungen im Gebet klagte – „da ließ Allah es von mir weichen“. Hanafitisch: Im Gebet selbst nur leise und ohne viele Bewegungen; und gegen Zweifel gilt: Gewissheit wird durch Zweifel nicht aufgehoben (vgl. Lektion 21).",
 "wdh": "3×, dabei leicht nach links pusten",
 "arab": "أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ",
+"audio_voll": true,
 "hisn": 138
 },
 {
@@ -1716,6 +1780,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 3371",
 "nutzen": "So sprach der Prophet ﷺ über seine Enkel al-Ḥasan und al-Ḥusain und sagte: So schützte euer Vater Ibrāhīm Ismāʿīl und Isḥāq. Für ein Kind: „U‘idhuka“ (Junge) bzw. „U‘idhuki“ (Mädchen).",
 "arab": "أُعِيذُكُمَا بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لاَمَّةٍ",
+"audio_voll": true,
 "hisn": 146
 },
 {
@@ -1794,6 +1859,7 @@ window.DUAS = {
 "nutzen": "Der Prophet ﷺ sagte: Wer einen Kranken besucht, dessen Frist noch nicht gekommen ist, und siebenmal dies spricht, den heilt Allah von dieser Krankheit.",
 "wdh": "7×",
 "arab": "أَسْأَلُ اللَّهَ الْعَظيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفيَكَ",
+"audio_voll": true,
 "hisn": 148
 },
 {
@@ -1805,6 +1871,7 @@ window.DUAS = {
 "nutzen": "Lege die Hand auf die schmerzende Stelle, sag dreimal „Bismillah“ und dann siebenmal diese Worte – so lehrte es der Prophet ﷺ ʿUthmān ibn Abī l-ʿĀṣ. Medizinische Behandlung ersetzt sie nicht, sie begleitet sie.",
 "wdh": "Zuerst 3× „Bismillah“, dann 7×",
 "arab": "أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ",
+"audio_voll": true,
 "hisn": 243
 },
 {
@@ -1825,6 +1892,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6510",
 "nutzen": "Der Prophet ﷺ tauchte in seinem Sterben die Hände in Wasser, strich sich übers Gesicht und sprach diese Worte (vgl. 50:19 in Lektion 34). Auch der Beste der Geschöpfe erlebte den Todeskampf – Trost für jeden, der einen Sterbenden begleitet.",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ إِنَّ لِلْمَوْتِ سَكَرَاتٍ",
+"audio_voll": true,
 "hisn": 151
 },
 {
@@ -1905,6 +1973,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1284; Sahih Muslim, Nr. 923",
 "nutzen": "Diese Worte ließ der Prophet ﷺ seiner Tochter Zainab ausrichten, als ihr Kind im Sterben lag. Üblich ist auch (von Gelehrten überliefert, nicht als Prophetenwort): „A‘zama llahu adschrak, wa ahsana ‘aza’ak, wa ghafara li-majjitik.“",
 "arab": "إِنَّ للَّهِ مَا أَخَذَ، وَلَهُ مَا أَعْطَى، وَكُلُّ شَيْءٍ عِنْدَهُ بِأَجَلٍ مُسَمَّى... فَلْتَصْبِرْ وَلْتَحْتَسِبْ",
+"audio_voll": true,
 "hisn": 162
 },
 {
@@ -1950,6 +2019,7 @@ window.DUAS = {
 "de": "Lob sei Allah.",
 "quelle": "Sahih al-Buchari, Nr. 6224",
 "arab": "الْحَمْدُ لِلَّهِ",
+"audio_voll": true,
 "hisn": 188
 },
 {
@@ -1960,6 +2030,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6224",
 "nutzen": "Nur, wenn der Niesende „Al-hamdu lillah“ gesagt hat. Einem Nichtmuslim, der niest und Allah lobt, sagt man: Jahdikumu llahu wa juslihu balakum (Abu Dawud 5038).",
 "arab": "يَرْحَمُكَ اللَّهُ",
+"audio_voll": true,
 "hisn": 188
 },
 {
@@ -1970,6 +2041,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6224",
 "nutzen": "Die Antwort auf „Jarhamuka llah“.",
 "arab": "يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ",
+"audio_voll": true,
 "hisn": 188
 },
 {
@@ -1980,6 +2052,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 2130; Sunan at-Tirmidhi, Nr. 1091",
 "nutzen": "Statt des vorislamischen Wunsches „Mit Eintracht und Söhnen!“.",
 "arab": "بَارَكَ اللَّهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+"audio_voll": true,
 "hisn": 190
 },
 {
@@ -1990,6 +2063,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 141; Sahih Muslim, Nr. 1434",
 "nutzen": "Wird den Eheleuten daraus ein Kind bestimmt, schadet ihm der Satan niemals. Der Islam stellt auch die vertrautesten Momente unter das Gedenken Allahs.",
 "arab": "بِسْمِ اللَّهِ، اللَّهُمَّ جَنِّبْنَا الشَّيْطَانَ، وَجَنِّبِ الشَّيْطَانَ مَا رَزَقْتَنَا",
+"audio_voll": true,
 "hisn": 192
 },
 {
@@ -2000,6 +2074,7 @@ window.DUAS = {
 "quelle": "Wort von al-Hasan al-Basri (bei Ibn as-Sunni), kein Prophetenwort – von den Gelehrten als schöne Glückwunschformel übernommen",
 "nutzen": "Die Eltern antworten: Baraka llahu laka wa baraka ‘alaik, wa dschazaka llahu chairan, wa razaqaka llahu mithlah, wa adschzala thawabak.",
 "arab": "بَارَكَ اللَّهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَشَكَرْتَ الْوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ",
+"audio_voll": true,
 "hisn": 145
 },
 {
@@ -2010,6 +2085,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3432 (hasan)",
 "nutzen": "Leise sprechen, nicht hörbar für den Betroffenen – um ihn nicht zu kränken. Nach der Überlieferung trifft den, der es spricht, diese Prüfung nicht.",
 "arab": "الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلاَكَ بِهِ، وَفَضَّلَنِي عَلَى كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلاً",
+"audio_voll": true,
 "hisn": 194
 },
 {
@@ -2020,6 +2096,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3433; Sunan Abu Dawud, Nr. 4858",
 "nutzen": "Was in der Runde an unnützem Gerede war, wird dadurch gesühnt – ideal zum Abschluss von Unterricht, Treffen und Gesprächen.",
 "arab": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+"audio_voll": true,
 "hisn": 196
 },
 {
@@ -2030,6 +2107,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 2035 (sahih)",
 "nutzen": "Wer das zu seinem Wohltäter sagt, hat ihn vollkommen gelobt.",
 "arab": "جَزَاكَ اللَّهُ خَيْراً",
+"audio_voll": true,
 "hisn": 198
 },
 {
@@ -2040,6 +2118,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 5125 (hasan)",
 "nutzen": "Antwort, wenn jemand sagt: „Inni uhibbuka fi llah.“ Der Prophet ﷺ empfahl, dem Bruder die Liebe um Allahs willen auch zu sagen.",
 "arab": "أَحَبَّكَ الَّذِي أَحْبَبْتَنِي لَهُ",
+"audio_voll": true,
 "hisn": 200
 },
 {
@@ -2050,6 +2129,7 @@ window.DUAS = {
 "quelle": "Sunan Ibn Madscha, Nr. 3803; al-Hakim, al-Mustadrak (sahih)",
 "nutzen": "Bei Erfolg, bestandener Prüfung, Geburt, guten Nachrichten.",
 "arab": "الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
+"audio_voll": true,
 "hisn": 218
 },
 {
@@ -2060,6 +2140,7 @@ window.DUAS = {
 "quelle": "Sunan Ibn Madscha, Nr. 3803; al-Hakim, al-Mustadrak (sahih)",
 "nutzen": "Auch das Schwere ist Prüfung, nicht Verlassenheit (vgl. Lektion zu Ad-Duha).",
 "arab": "الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ",
+"audio_voll": true,
 "hisn": 218
 },
 {
@@ -2070,6 +2151,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 3000; Sahih al-Buchari, Nr. 2662",
 "nutzen": "Schutz vor Übertreibung beim Loben (vgl. 53:32: „Erklärt euch nicht selbst für rein“).",
 "arab": "أَحْسِبُ فُلاَناً وَاللَّهُ حَسِيبُهُ، وَلاَ أُزَكِّي عَلَى اللَّهِ أَحَداً",
+"audio_voll": true,
 "hisn": 231
 },
 {
@@ -2080,6 +2162,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 283 (u. a.)",
 "nutzen": "Bei Staunen und Verwunderung – statt leerer Ausrufe. Bei Freude über etwas sagt man „Allahu akbar!“.",
 "arab": "سُبْحَانَ اللَّهِ",
+"audio_voll": true,
 "hisn": 240
 }
 ]
@@ -2097,6 +2180,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 899",
 "nutzen": "Den Wind nicht verfluchen – er handelt auf Allahs Befehl.",
 "arab": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا فِيهَا، وَخَيْرَ مَا أُرْسِلَتْ بِهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ مَا فِيهَا، وَشَرِّ مَا أُرْسِلَتْ بِهِ",
+"audio_voll": true,
 "hisn": 167
 },
 {
@@ -2107,6 +2191,7 @@ window.DUAS = {
 "quelle": "Muwatta’ Malik – Wort von ‘Abdullah ibn az-Zubair (mauquf)",
 "nutzen": "Angelehnt an Koran 13:13.",
 "arab": "سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلاَئِكةُ مِنْ خِيفَتِهِ",
+"audio_voll": true,
 "hisn": 168
 },
 {
@@ -2117,6 +2202,7 @@ window.DUAS = {
 "quelle": "Sunan Abu Dawud, Nr. 1169 (sahih)",
 "nutzen": "Bei Dürre. Hanafitisch besteht das Istisqa’ nach Abu Hanifa vor allem aus Duʿā und Istighfar; ein gemeinsames Gebet ist erlaubt (nach Abu Yusuf und Muhammad Sunna).",
 "arab": "اللَّهُمَّ اسْقِنَا غَيْثاً مُغِيثاً مَرِيئاً مَرِيعاً، نَافِعاً غَيْرَ ضَارٍّ، عَاجِلاً غَيْرَ آجِلٍ",
+"audio_voll": true,
 "hisn": 169
 },
 {
@@ -2127,6 +2213,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1032",
 "nutzen": "Der Prophet ﷺ ließ den Regen auf sich fallen und sagte: Er kommt frisch von seinem Herrn (Muslim 898).",
 "arab": "اللَّهُمَّ صَيِّباً نَافِعاً",
+"audio_voll": true,
 "hisn": 172
 },
 {
@@ -2137,6 +2224,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 846; Sahih Muslim, Nr. 71",
 "nutzen": "Wer den Regen den Sternen zuschreibt statt Allah, von dem sagt Allah im Hadith Qudsi: Er verleugnet Mich und glaubt an die Sterne.",
 "arab": "مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ",
+"audio_voll": true,
 "hisn": 173
 },
 {
@@ -2147,6 +2235,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3451 (kürzere Fassung, hasan); ad-Darimi (diese Fassung)",
 "nutzen": "Bei jedem Neumond – besonders zu Beginn von Ramadan und Schawwal.",
 "arab": "اللَّهُ أَكْبَرُ، اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلاَمَةِ وَالْإِسْلاَمِ، وَالتَّوْفِيقِ لِمَا تُحِبُّ رَبَّنَا وَتَرْضَى، رَبُّنَا وَرَبُّكَ اللَّهُ",
+"audio_voll": true,
 "hisn": 175
 },
 {
@@ -2157,6 +2246,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 1373",
 "nutzen": "Der Prophet ﷺ gab die ersten Früchte danach dem jüngsten anwesenden Kind.",
 "arab": "اللَّهُمَّ بَارِكْ لَنَا فِي ثَمَرِنَا، وَبَارِكْ لَنَا فِي مَدِينَتِنَا، وَبَارِكْ لَنَا فِي صَاعِنَا، وَبَارِكْ لَنَا فِي مُدِّنَا",
+"audio_voll": true,
 "hisn": 187
 },
 {
@@ -2167,6 +2257,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 1549; Sahih Muslim, Nr. 1184",
 "nutzen": "Im Ihram für Hadsch und ‘Umra. Hanafitisch wird der Ihram durch die Absicht zusammen mit der Talbiya (oder gleichwertigem Dhikr) gültig; Männer sprechen sie laut.",
 "arab": "لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ، وَالنِّعْمَةَ، لَكَ وَالْمُلْكَ، لاَ شَرِيكَ لَكَ",
+"audio_voll": true,
 "hisn": 233
 },
 {
@@ -2177,6 +2268,7 @@ window.DUAS = {
 "quelle": "Sunan at-Tirmidhi, Nr. 3585 (hasan)",
 "nutzen": "„Die beste Duʿā ist die Duʿā des Tages von ‘Arafa, und das Beste, was ich und die Propheten vor mir gesagt haben, ist …“ – auch für Nicht-Pilger am 9. Dhu l-Hiddscha; das Fasten an diesem Tag sühnt zwei Jahre (Muslim 1162).",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+"audio_voll": true,
 "hisn": 237
 },
 {
@@ -2187,6 +2279,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 1966 und 1967; Zusatz in Klammern: Sunan Abu Dawud, Nr. 2795",
 "nutzen": "Hanafitisch ist das Kurban-Opfer für den Sesshaften mit Nisab-Vermögen wadschib (vgl. Lektion zu Al-Kauthar). Das Bismillah beim Schlachten ist Pflicht – wird es absichtlich ausgelassen, ist das Fleisch nach hanafitischer Schule nicht halal; bei Vergessen schon.",
 "arab": "بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ [اللَّهُمَّ مِنْكَ وَلَكَ] اللَّهُمَّ تَقَبَّلْ مِنِّي",
+"audio_voll": true,
 "hisn": 246
 }
 ]
@@ -2205,6 +2298,7 @@ window.DUAS = {
 "nutzen": "„O ihr Menschen, wendet euch Allah reuig zu, denn ich wende mich Ihm hundertmal am Tag zu.“ Und: „Bei Allah, ich bitte Allah mehr als siebzigmal am Tag um Vergebung.“",
 "wdh": "100× am Tag",
 "arab": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
+"audio_voll": true,
 "hisn": 96
 },
 {
@@ -2215,6 +2309,7 @@ window.DUAS = {
 "quelle": "Abū Dāwūd, Nr. 1517; at-Tirmidhī, Nr. 3577 (sahih)",
 "nutzen": "Wer es spricht, dem vergibt Allah – selbst wenn er aus der Schlachtreihe geflohen wäre, was zu den großen Sünden gehört.",
 "arab": "أَسْتَغْفِرُ اللَّهَ الْعَظيمَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ القَيّوُمُ وَأَتُوبُ إِلَيهِ",
+"audio_voll": true,
 "hisn": 250
 },
 {
@@ -2235,6 +2330,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6682; Sahih Muslim, Nr. 2694",
 "nutzen": "„Zwei Worte, leicht auf der Zunge, schwer auf der Waage, geliebt beim Allerbarmer.“ (vgl. Lektion 30)",
 "arab": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحانَ اللَّهِ الْعَظِيمِ",
+"audio_voll": true,
 "hisn": 256
 },
 {
@@ -2245,6 +2341,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 2695",
 "nutzen": "„Das zu sagen ist mir lieber als alles, worüber die Sonne aufgeht.“ Es sind die vier liebsten Worte bei Allah, egal mit welchem man beginnt (Muslim 2137). Hundertmal Tasbīḥ am Tag bringt tausend gute Taten (Muslim 2698).",
 "arab": "سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ",
+"audio_voll": true,
 "hisn": 257
 },
 {
@@ -2255,6 +2352,7 @@ window.DUAS = {
 "quelle": "at-Tirmidhī, Nr. 3464 (sahih nach al-Albānī)",
 "nutzen": "Für jedes Mal wird dem Sprecher eine Dattelpalme im Paradies gepflanzt.",
 "arab": "سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ",
+"audio_voll": true,
 "hisn": 259
 },
 {
@@ -2265,6 +2363,7 @@ window.DUAS = {
 "quelle": "Sahih al-Buchari, Nr. 6384; Sahih Muslim, Nr. 2704",
 "nutzen": "„Ein Schatz von den Schätzen des Paradieses.“ Gut bei Überforderung, schweren Aufgaben und vor jeder Anstrengung.",
 "arab": "لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ",
+"audio_voll": true,
 "hisn": 260
 },
 {
@@ -2275,6 +2374,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 2696",
 "nutzen": "Der Beduine fragte danach: „Das ist für meinen Herrn – und was ist für mich?“ Die Antwort steht im nächsten Eintrag.",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، اللَّهُ أَكْبَرُ كَبِيراً، وَالْحَمْدُ لِلَّهِ كَثِيراً، سُبْحَانَ اللَّهِ رَبِّ العَالَمِينَ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَزِيزِ الْحَكِيمِ",
+"audio_voll": true,
 "hisn": 262
 },
 {
@@ -2285,6 +2385,7 @@ window.DUAS = {
 "quelle": "Sahih Muslim, Nr. 2697",
 "nutzen": "Diese Bitten lehrte der Prophet ﷺ jedem, der den Islam annahm – „sie vereinen dir dein Diesseits und dein Jenseits“. Sie passen auch in die Sitzung zwischen den beiden Niederwerfungen.",
 "arab": "اللَّهُمَّ اغْفِرِ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَعَافِنِي وَارْزُقْنِي",
+"audio_voll": true,
 "hisn": 263
 },
 {
@@ -2295,6 +2396,7 @@ window.DUAS = {
 "quelle": "at-Tirmidhī, Nr. 3383; Ibn Mādscha, Nr. 3800 (ḥasan)",
 "nutzen": "„Das beste Gedenken ist lā ilāha illa llāh, und die beste Duʿā ist al-ḥamdu lillāh.“ Das Wort des Tauḥīd ist die schwerste Karte auf der Waage (vgl. Lektion 30).",
 "arab": "لاَ إِلَهَ إِلاَّ اللَّهُ",
+"audio_voll": true,
 "hisn": 264
 }
 ]

@@ -1,5 +1,5 @@
 // Service Worker: hält die App-Dateien offline bereit. Die Rezitationen verwaltet audio.js selbst.
-const VERSION = "kik-shell-5a99e9d4ef3b";
+const VERSION = "kik-shell-7e549d4df82f";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png", "audio.js", "brennpunkte.js", "data-suren.js", "duas.js", "glossar.js", "lektionen1.js", "lektionen10.js", "lektionen11.js", "lektionen12.js", "lektionen13.js", "lektionen2.js", "lektionen3.js", "lektionen4.js", "lektionen5.js", "lektionen6.js", "lektionen7.js", "lektionen8.js", "lektionen9.js", "suratext.js"];
 
 self.addEventListener("install", e => {
