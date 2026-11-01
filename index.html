@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f4a41">
+<meta name="description" content="Den Koran im Kontext verstehen: alle 114 Suren in Offenbarungsreihenfolge mit Tafsir, Hadithen, hanafitischem Fiqh, Duʿās und Rezitation Vers für Vers.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Koran im Kontext">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Koran im Kontext</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Layout: ruhige Lese-App – eine Inhaltsspalte, Navigation oben, viel Weißraum, Gold nur als Akzent. */
+:root{
+  --bg:#f6f5f0; --surface:#fffefa; --ink:#22302e; --muted:#5c6b67;
+  --accent:#17665a; --accent-ink:#0e4a41; --gold:#a07a28; --gold-soft:#c9a84c;
+  --line:#dcd9cd; --soft:#edeae0; --arab:#1d3a35; --ok:#2e7d4f;
+  --shadow:0 1px 3px rgba(34,48,46,.08);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#101917; --surface:#18231f; --ink:#e8e6dd; --muted:#9fada7;
+  --accent:#4fb3a1; --accent-ink:#7fd0c0; --gold:#c9a84c; --gold-soft:#a07a28;
+  --line:#2a3833; --soft:#1e2b27; --arab:#cfe8e0; --ok:#5fbd87;
+  --shadow:0 1px 3px rgba(0,0,0,.4); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#101917; --surface:#18231f; --ink:#e8e6dd; --muted:#9fada7;
+  --accent:#4fb3a1; --accent-ink:#7fd0c0; --gold:#c9a84c; --gold-soft:#a07a28;
+  --line:#2a3833; --soft:#1e2b27; --arab:#cfe8e0; --ok:#5fbd87;
+  --shadow:0 1px 3px rgba(0,0,0,.4); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink); margin:0;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-size:17px; line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 48px;
+}
+.wrap{max-width:860px;margin:0 auto}
+header.app{padding-block:28px 10px;text-align:center}
+.bismillah{font-family:Amiri,serif;color:var(--gold);font-size:1.5rem;margin:0}
+h1.app-title{font-family:Marcellus,serif;font-weight:400;font-size:2rem;margin:.2em 0 .1em;letter-spacing:.02em}
+.app-sub{color:var(--muted);margin:0;font-size:.95rem}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 26px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav.tabs button{
+  font:inherit;font-size:.92rem;font-weight:500;cursor:pointer;
+  background:var(--surface);color:var(--ink);border:1px solid var(--line);
+  border-radius:999px;padding:7px 16px;
+}
+nav.tabs button:hover{border-color:var(--accent)}
+@media (max-width:640px){
+  nav.tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:14px 0 18px}
+  nav.tabs::-webkit-scrollbar{display:none}
+  nav.tabs button{flex:0 0 auto}
+}
+nav.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] nav.tabs button.on{color:#0c1512}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) nav.tabs button.on{color:#0c1512}}
+main{min-height:60vh}
+h2.sec{font-family:Marcellus,serif;font-weight:400;font-size:1.55rem;margin:.4em 0 .5em;text-wrap:balance}
+h3{font-family:Marcellus,serif;font-weight:400;font-size:1.2rem;margin:1.4em 0 .4em}
+p{margin:.5em 0 .9em;max-width:72ch}
+.lead{color:var(--muted);max-width:72ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.lesson-row{display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .15s}
+.lesson-row:hover{border-color:var(--accent)}
+.lesson-num{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--soft);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:Marcellus,serif;font-size:1.05rem;border:1px solid var(--line)}
+.lesson-row.done .lesson-num{background:var(--accent);color:#fff;border-color:var(--accent)}
+.lesson-body{min-width:0;flex:1}
+.lesson-title{font-weight:700;margin:0}
+.lesson-title .ar{font-family:Amiri,serif;font-weight:400;color:var(--gold);margin-left:8px}
+.lesson-meta{color:var(--muted);font-size:.88rem;margin:2px 0 6px}
+.lesson-kurz{margin:0;font-size:.95rem;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.done-badge{color:var(--ok);font-size:.85rem;font-weight:700}
+.progress{height:8px;background:var(--soft);border-radius:999px;overflow:hidden;margin:10px 0 4px}
+.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold-soft));border-radius:999px}
+.pill{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.04em;padding:2px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.mekka{color:var(--accent-ink);border-color:var(--accent)}
+.pill.medina{color:var(--gold);border-color:var(--gold)}
+/* Lektion-Detailansicht */
+.back{background:none;border:none;color:var(--accent);font:inherit;font-weight:700;cursor:pointer;padding:0;margin-bottom:14px}
+.lek-head{border-bottom:2px solid var(--gold);padding-bottom:16px;margin-bottom:8px}
+.lek-head .arabname{font-family:Amiri,serif;font-size:2.2rem;margin:0;color:var(--arab)}
+.lek-head h2{font-family:Marcellus,serif;font-weight:400;font-size:1.8rem;margin:.1em 0}
+.lek-head .meta{color:var(--muted);font-size:.92rem}
+.block{margin:26px 0}
+.block-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.kurzbox{background:var(--soft);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px}
+.kurzbox p{margin:0}
+.versbox{text-align:center;padding:22px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.versbox .ar{font-family:Amiri,serif;font-size:1.9rem;line-height:2;direction:rtl;color:var(--arab);margin:0}
+.versbox .ue{font-style:italic;margin:.6em 0 0}
+.versbox .ref{color:var(--muted);font-size:.85rem}
+.begriff{display:grid;grid-template-columns:minmax(90px,auto) 1fr;gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.begriff:last-child{border-bottom:none}
+.begriff .ar{font-family:Amiri,serif;font-size:1.45rem;direction:rtl;text-align:left;color:var(--arab)}
+.begriff .tr{font-weight:700}
+.begriff .wz{color:var(--muted);font-size:.85rem}
+.begriff .erkl{grid-column:1/-1;margin:0;font-size:.95rem}
+@media(min-width:620px){.begriff{grid-template-columns:130px 1fr}.begriff .erkl{grid-column:2}}
+.tafsir-abschnitt{margin:0 0 18px}
+.tafsir-abschnitt .vers{font-weight:700;color:var(--accent-ink)}
+.hadith{border-left:3px solid var(--accent);padding:10px 16px;margin:0 0 12px;background:var(--surface);border-radius:0 10px 10px 0}
+.hadith p{margin:0}
+.hadith .q{color:var(--muted);font-size:.85rem;display:block;margin-top:4px}
+.hanafibox{background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:14px 18px}
+.hanafibox .block-label{margin-bottom:4px}
+ul.todo{padding-left:22px;margin:.4em 0}
+ul.todo li{margin:.45em 0}
+.donebar{display:flex;align-items:center;gap:12px;margin:34px 0 8px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:12px;flex-wrap:wrap}
+.donebar button{font:inherit;font-weight:700;cursor:pointer;border-radius:999px;padding:9px 20px;border:1px solid var(--accent);background:var(--accent);color:#fff}
+.donebar button.undo{background:transparent;color:var(--accent)}
+.navlek{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.navlek button{font:inherit;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+.navlek button:hover{border-color:var(--accent)}
+/* Vollständiger Surentext */
+details.sura-text{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-top:10px;overflow:hidden}
+details.sura-text summary{cursor:pointer;padding:13px 18px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+details.sura-text summary::-webkit-details-marker{display:none}
+details.sura-text summary .chev{color:var(--gold);flex:0 0 auto}
+details.sura-text[open] summary{border-bottom:1px solid var(--line)}
+.sura-text-inner{padding:6px 18px 14px}
+.sura-basmala{font-family:Amiri,serif;font-size:1.5rem;text-align:center;color:var(--gold);margin:10px 0 4px;direction:rtl}
+.verse-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.verse-item:last-child{border-bottom:none}
+.verse-item .ar{font-family:Amiri,serif;font-size:1.55rem;line-height:2.1;direction:rtl;text-align:right;color:var(--arab);margin:0}
+.verse-item .vn{display:inline-flex;align-items:center;justify-content:center;min-width:1.7em;height:1.7em;border:1px solid var(--gold);border-radius:50%;font-size:.8rem;font-family:"Alegreya Sans",sans-serif;color:var(--gold);margin-right:8px;vertical-align:middle;font-variant-numeric:tabular-nums}
+.verse-item .de{margin:.45em 0 0;font-size:.97rem;color:var(--ink)}
+.verse-item .de .nr{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}
+.sura-text-quelle{color:var(--muted);font-size:.82rem;margin:12px 0 0}
+/* Audio */
+[hidden]{display:none!important}
+.audio-bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:0 0 10px}
+.audio-btn{font:inherit;font-size:.92rem;font-weight:700;cursor:pointer;border-radius:999px;padding:7px 16px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none;display:inline-block}
+:root[data-theme="dark"] .audio-btn:not(.ghost){color:#0c1512}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .audio-btn:not(.ghost){color:#0c1512}}
+.audio-btn.ghost{background:transparent;color:var(--accent)}
+.audio-btn.small{padding:4px 12px;font-size:.85rem}
+.audio-btn:disabled{opacity:.55;cursor:default}
+.audio-note{color:var(--muted);font-size:.85rem}
+.v-actions{display:flex;gap:12px;align-items:center;margin-top:6px}
+.v-play{font:inherit;font-size:.85rem;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--accent);border-radius:999px;padding:2px 12px;min-height:32px}
+.v-play:hover{border-color:var(--accent)}
+.v-link{font-size:.82rem;color:var(--muted)}
+.verse-item.playing{background:var(--soft);box-shadow:inset 3px 0 0 var(--gold);border-radius:8px;padding-inline:10px}
+#kik-player{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -2px 12px rgba(0,0,0,.08);
+  padding-block:10px calc(10px + env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body.kp-open{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+.kp-info{display:flex;flex-direction:column;min-width:0}
+.kp-title{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kp-sub{color:var(--muted);font-size:.82rem}
+.kp-ctrl{display:flex;gap:6px}
+.kp-ctrl button{font:inherit;font-size:1.05rem;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.kp-ctrl .kp-main{background:var(--accent);border-color:var(--accent);color:#fff}
+.kp-ctrl .kp-repeat.on{border-color:var(--gold);background:var(--soft)}
+#kik-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:21;max-width:min(92vw,520px);
+  background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:.92rem;box-shadow:var(--shadow)}
+.off-card .progress{margin:8px 0}
+.off-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.off-list{padding-block:4px}
+.off-row{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.off-row:last-child{border-bottom:none}
+.off-name{font-weight:500;min-width:0;flex:1 1 160px}
+.copy-url code{font-size:1rem;word-break:break-all;background:var(--soft);padding:4px 8px;border-radius:6px}
+/* Duʿā */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.chip{font:inherit;font-size:.86rem;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 13px}
+.chip.on{border-color:var(--gold);background:var(--soft);font-weight:700}
+.toggles{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 16px;color:var(--muted);font-size:.92rem}
+.toggles label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.dua-kat{font-family:Marcellus,serif;font-size:1.25rem;margin:26px 0 4px;color:var(--accent-ink)}
+.dua-kat-intro{color:var(--muted);margin:0 0 12px;font-size:.95rem}
+.dua-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow)}
+.dua-card.learned{border-color:var(--ok)}
+.dua-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.dua-title{font-weight:700;margin:0}
+.dua-wdh{font-size:.78rem;font-weight:700;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:1px 9px;white-space:nowrap}
+.dua-ar{font-family:Amiri,serif;font-size:1.6rem;line-height:2.1;direction:rtl;text-align:right;color:var(--arab);margin:10px 0 6px}
+.dua-laut{font-style:italic;color:var(--accent-ink);margin:0 0 6px}
+.dua-de{margin:0 0 6px}
+.dua-nutzen{font-size:.92rem;color:var(--ink);background:var(--soft);border-radius:8px;padding:8px 12px;margin:8px 0}
+.dua-q{color:var(--muted);font-size:.84rem;margin:4px 0 0}
+.dua-foot{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;margin-top:10px}
+.dua-learn{font:inherit;font-size:.86rem;cursor:pointer;border-radius:999px;padding:4px 14px;border:1px solid var(--ok);background:transparent;color:var(--ok)}
+.dua-card.learned .dua-learn{background:var(--ok);color:#fff}
+.dua-hidden{cursor:pointer;border:1px dashed var(--line);border-radius:8px;padding:12px;text-align:center;color:var(--muted);margin:10px 0}
+/* Suren-Liste */
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+.controls input[type=search]{flex:1 1 220px;min-width:0;font:inherit;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.controls select{font:inherit;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.sure-row{display:grid;grid-template-columns:48px 1fr auto;gap:4px 14px;align-items:center;padding:12px 6px;border-bottom:1px solid var(--line)}
+.sure-row .nr{font-family:Marcellus,serif;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.sure-row .nm{min-width:0}
+.sure-row .nm b{font-weight:700}
+.sure-row .nm .ar{font-family:Amiri,serif;color:var(--gold);margin-left:6px}
+.sure-row .nm .de{color:var(--muted);font-size:.9rem}
+.sure-row .thema{grid-column:2/4;margin:0;font-size:.92rem;color:var(--muted)}
+.sure-row .side{text-align:right;font-size:.82rem;color:var(--muted);white-space:nowrap}
+.sure-row .lek-link{color:var(--accent);font-weight:700;cursor:pointer;text-decoration:underline}
+/* Brennpunkte */
+details.bp{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 12px;overflow:hidden}
+details.bp summary{cursor:pointer;padding:14px 18px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+details.bp summary::-webkit-details-marker{display:none}
+details.bp summary .chev{color:var(--gold);flex:0 0 auto}
+details.bp[open] summary{border-bottom:1px solid var(--line)}
+.bp-inner{padding:4px 18px 18px}
+.bp-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:16px 0 4px}
+.bp-inner .versbox{margin-top:10px}
+/* Glossar */
+.glos-grid{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:680px){.glos-grid{grid-template-columns:1fr 1fr}}
+.glos-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
+.glos-card .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.glos-card .ar{font-family:Amiri,serif;font-size:1.5rem;color:var(--arab)}
+.glos-card .tr{font-weight:700}
+.glos-card .wz{color:var(--muted);font-size:.82rem}
+.glos-card p{margin:.4em 0 0;font-size:.93rem}
+.kat-label{font-family:Marcellus,serif;font-size:1.15rem;margin:22px 0 10px;color:var(--accent-ink)}
+/* Grundlagen & Quellen */
+.g-abschnitt{margin:0 0 26px}
+.q-item{padding:10px 0;border-bottom:1px solid var(--line)}
+.q-item:last-child{border-bottom:none}
+.q-item b{display:block}
+.q-item span{color:var(--muted);font-size:.93rem}
+.hinweis{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:.93rem;color:var(--muted);margin-top:22px}
+.next-note{color:var(--muted);font-size:.92rem;font-style:italic}
+a{color:var(--accent)}
+@media (prefers-reduced-motion: no-preference){
+  .view{animation:fadein .25s ease}
+  @keyframes fadein{from{transform:translateY(4px)}to{transform:none}}
+}
+button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header class="app">
+  <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  <h1 class="app-title">Koran im Kontext</h1>
+  <p class="app-sub">Offenbarung verstehen – in der Reihenfolge, in der sie kam. Mit Tafsir, Asbāb an-Nuzūl, Hadithen und hanafitischem Fiqh.</p>
+</header>
+<nav class="tabs" id="tabs"></nav>
+<main id="main"></main>
+</div>
+
+<script src="data-suren.js"></script>
+<script src="lektionen1.js"></script>
+<script src="lektionen2.js"></script>
+<script src="lektionen3.js"></script>
+<script src="lektionen4.js"></script>
+<script src="lektionen5.js"></script>
+<script src="lektionen6.js"></script>
+<script src="lektionen7.js"></script>
+<script src="lektionen8.js"></script>
+<script src="lektionen9.js"></script>
+<script src="lektionen10.js"></script>
+<script src="lektionen11.js"></script>
+<script src="lektionen12.js"></script>
+<script src="lektionen13.js"></script>
+<script src="brennpunkte.js"></script>
+<script src="glossar.js"></script>
+<script src="suratext.js"></script>
+<script src="duas.js"></script>
+<script src="audio.js"></script>
+<script>
+"use strict";
+const ALLE_LEKTIONEN = ["LEKTIONEN","LEKTIONEN2","LEKTIONEN3","LEKTIONEN4","LEKTIONEN5","LEKTIONEN6","LEKTIONEN7",
+  "LEKTIONEN8","LEKTIONEN9","LEKTIONEN10","LEKTIONEN11","LEKTIONEN12","LEKTIONEN13"]
+  .flatMap(k => Array.isArray(window[k]) ? window[k] : [])
+  .sort((a,b) => a.offb - b.offb);
+const KOMMEND = (()=>{ const hat = new Set(ALLE_LEKTIONEN.map(l=>l.sure));
+  return [...window.SUREN].filter(s=>!hat.has(s.n)).sort((a,b)=>a.o-b.o).slice(0,6)
+    .map(s=>({o:s.o, s:s.n, n:s.name})); })();
+const TABS = [
+ {id:"pfad", label:"Lernpfad"},
+ {id:"suren", label:"Alle 114 Suren"},
+ {id:"dua", label:"Duʿā"},
+ {id:"brenn", label:"Brennpunkt-Verse"},
+ {id:"glossar", label:"Glossar"},
+ {id:"quellen", label:"Quellen"},
+ {id:"offline", label:"Offline & Audio"}
+];
+let state = {view:"pfad", lesson:null, sort:"offb", ort:"alle", q:"", gq:"", dq:"", dkat:"alle", duebung:false, doffen:false, reveal:{}};
+window.state = state;
+const AUD = window.KIK_AUDIO || {suraToolbar:()=>"", verseActions:()=>"", verseRangeActions:()=>"", bind:()=>{}, viewOffline:()=>"<div class='view'></div>"};
+
+/* Fortschritt (nur Komfort, localStorage kann fehlen) */
+function getDone(){ try{ return JSON.parse(localStorage.getItem("kik-done")||"[]"); }catch(e){ return []; } }
+function setDone(arr){ try{ localStorage.setItem("kik-done", JSON.stringify(arr)); }catch(e){} }
+function isDone(id){ return getDone().includes(id); }
+function toggleDone(id){ const d=getDone(); const i=d.indexOf(id); if(i>=0)d.splice(i,1); else d.push(id); setDone(d); }
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function el(id){ return document.getElementById(id); }
+
+function renderTabs(){
+  el("tabs").innerHTML = TABS.map(t=>
+    `<button class="${state.view===t.id?"on":""}" data-tab="${t.id}">${t.label}</button>`).join("");
+  el("tabs").querySelectorAll("button").forEach(b=>b.onclick=()=>{ state.view=b.dataset.tab; state.lesson=null; render(); window.scrollTo(0,0); });
+  const t = el("tabs"), on = t.querySelector(".on");
+  if(on && t.scrollWidth > t.clientWidth) t.scrollLeft = on.offsetLeft - (t.clientWidth - on.offsetWidth)/2;
+}
+
+/* ───────── Lernpfad ───────── */
+function viewPfad(){
+  const done = getDone();
+  const total = 1 + ALLE_LEKTIONEN.length;
+  const doneCount = (done.includes("grundlagen")?1:0) + ALLE_LEKTIONEN.filter(l=>done.includes("l"+l.sure)).length;
+  const pct = Math.round(100*doneCount/total);
+  let html = `<div class="view">
+    <h2 class="sec">Dein Lernpfad</h2>
+    <p class="lead">Der rote Faden dieser App ist die <b>Offenbarungsreihenfolge</b> (Kairoer Standard-Chronologie): Du lernst die Suren so, wie Allah die erste Generation erzogen hat – Schritt für Schritt. Starte mit den Grundlagen, dann Lektion für Lektion.</p>
+    <div class="progress" role="img" aria-label="Fortschritt ${pct}%"><div style="width:${pct}%"></div></div>
+    <p class="lead" style="font-size:.9rem">${doneCount} von ${total} Lektionen abgeschlossen</p>
+    <div class="grid" style="margin-top:14px">`;
+  html += lessonCard("grundlagen", "٠", "Grundlagen", "Wie du den Koran im Kontext liest", window.GRUNDLAGEN.kurz, done.includes("grundlagen"), "Startmodul · vor Lektion 1 lesen");
+  ALLE_LEKTIONEN.forEach(l=>{
+    html += lessonCard("l"+l.sure, l.offb, l.name + ' <span class="ar">'+l.arab.replace("سُورَةُ ","")+'</span>', l.de, l.kurz, done.includes("l"+l.sure),
+      `${l.offb}. Offenbarung · Sure ${l.sure} · ${l.verse} Verse · ${l.ort}`);
+  });
+  html += `</div>`;
+  if(KOMMEND.length){
+    html += `<h3>Als Nächstes im Lernpfad</h3>
+    <p class="next-note">Diese Lektionen folgen als Nächstes: ${KOMMEND.map(k=>`${k.o}. ${esc(k.n)} (Sure ${k.s})`).join(" · ")} …</p>`;
+  } else {
+    html += `<h3>Der Lernpfad ist vollständig</h3>
+    <p class="next-note">Alle 114 Suren – von „Lies!“ (96:1) bis „Wenn die Hilfe Allahs kommt“ (110) – in der Reihenfolge, in der sie herabkamen. Möge Allah dir das Verstehen, das Umsetzen und das Weitergeben leicht machen.</p>`;
+  }
+  html += `</div>`;
+  return html;
+}
+function lessonCard(id, num, title, sub, kurz, done, meta){
+  return `<div class="card lesson-row ${done?"done":""}" data-open="${id}" role="button" tabindex="0">
+    <div class="lesson-num">${done?"✓":num}</div>
+    <div class="lesson-body">
+      <p class="lesson-title">${title} <span class="lesson-meta">· ${esc(sub)}</span> ${done?'<span class="done-badge">abgeschlossen</span>':""}</p>
+      <p class="lesson-meta">${esc(meta)}</p>
+      <p class="lesson-kurz">${esc(kurz)}</p>
+    </div></div>`;
+}
+
+/* ───────── Grundlagen-Ansicht ───────── */
+function viewGrundlagen(){
+  const g = window.GRUNDLAGEN;
+  let html = `<div class="view"><button class="back" data-back>← Zurück zum Lernpfad</button>
+    <div class="lek-head"><h2>${esc(g.titel)}</h2><p class="meta">Startmodul · Lies das vor Lektion 1</p></div>
+    <div class="block"><div class="block-label">Worum es geht</div><div class="kurzbox"><p>${esc(g.kurz)}</p></div></div>`;
+  g.abschnitte.forEach(a=>{
+    html += `<div class="g-abschnitt"><h3>${esc(a.t)}</h3>${a.p.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+  });
+  html += doneBar("grundlagen") + `</div>`;
+  return html;
+}
+
+/* ───────── Lektion-Ansicht ───────── */
+function viewLesson(l){
+  const id = "l"+l.sure;
+  let html = `<div class="view"><button class="back" data-back>← Zurück zum Lernpfad</button>
+  <div class="lek-head">
+    <p class="arabname">${esc(l.arab)}</p>
+    <h2>Lektion ${l.offb}: ${esc(l.name)} – ${esc(l.de)}</h2>
+    <p class="meta">Sure ${l.sure} · ${l.verse} Verse · ${l.ort} · ${esc(l.zeit)}</p>
+  </div>
+  <div class="block"><div class="block-label">Kurzzusammenfassung – das Wichtigste in 60 Sekunden</div>
+    <div class="kurzbox"><p>${esc(l.kurz)}</p></div></div>
+  <div class="block"><div class="versbox">
+    <p class="ar">${esc(l.schluessel.arab)}</p>
+    <p class="ue">„${esc(l.schluessel.ueb)}“</p>
+    <p class="ref">Schlüsselvers · Koran ${esc(l.schluessel.ref)}</p></div></div>
+  ${suraTextBlock(l)}
+  <div class="block"><div class="block-label">Kontext &amp; Zeit</div>${l.kontext.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+  <div class="block"><div class="block-label">Offenbarungsanlässe (Asbāb an-Nuzūl)</div>${
+    l.asbab.map(a=> typeof a==="string" ? `<p>${esc(a)}</p>` :
+      `<div class="hadith"><p>${esc(a.text)}</p><span class="q">Quelle: ${esc(a.quelle)}</span></div>`).join("")}</div>
+  <div class="block"><div class="block-label">Arabische Schlüsselbegriffe</div><div class="card">${
+    l.begriffe.map(b=>`<div class="begriff">
+      <div><span class="tr">${esc(b.tr)}</span><br><span class="wz">Wurzel: ${esc(b.wurzel)}</span></div>
+      <div class="ar">${esc(b.arab)}</div>
+      <p class="erkl">${esc(b.erkl)}</p></div>`).join("")}</div></div>
+  <div class="block"><div class="block-label">Tafsir – Abschnitt für Abschnitt</div>${
+    l.tafsir.map(t=>`<div class="tafsir-abschnitt"><p><span class="vers">${esc(t.vers)}:</span> ${esc(t.text)}</p></div>`).join("")}</div>
+  <div class="block"><div class="block-label">Authentische Hadithe zu dieser Sure</div>${
+    l.ahadith.map(h=>`<div class="hadith"><p>${esc(h.text)}</p><span class="q">${esc(h.quelle)}</span></div>`).join("")}</div>`;
+  if(l.hanafi){
+    html += `<div class="block"><div class="hanafibox"><div class="block-label">Hanafitischer Hinweis</div><p style="margin:0">${esc(l.hanafi)}</p></div></div>`;
+  }
+  html += `<div class="block"><div class="block-label">Umsetzung im Alltag</div><ul class="todo">${
+    l.umsetzung.map(u=>`<li>${esc(u)}</li>`).join("")}</ul></div>`;
+  html += doneBar(id);
+  const idx = ALLE_LEKTIONEN.indexOf(l);
+  html += `<div class="navlek">
+    ${idx>0?`<button data-open="l${ALLE_LEKTIONEN[idx-1].sure}">← Lektion ${idx}: ${esc(ALLE_LEKTIONEN[idx-1].name)}</button>`:`<button data-open="grundlagen">← Grundlagen</button>`}
+    ${idx<ALLE_LEKTIONEN.length-1?`<button data-open="l${ALLE_LEKTIONEN[idx+1].sure}">Lektion ${idx+2}: ${esc(ALLE_LEKTIONEN[idx+1].name)} →</button>`:""}
+  </div></div>`;
+  return html;
+}
+function suraTextBlock(l){
+  const verses = (window.SURATEXT||{})[l.sure];
+  if(!verses) return "";
+  const offen = verses.length <= 22 ? " open" : "";
+  let html = `<div class="block"><div class="block-label">Die ganze Sure – lesen und hören</div>${AUD.suraToolbar(l.sure)}<details class="sura-text" data-sura="${l.sure}"${offen}>
+    <summary><span>Arabisch mit Übersetzung (${verses.length} Verse)</span><span class="chev">＋</span></summary>
+    <div class="sura-text-inner">`;
+  if(l.sure !== 1 && l.sure !== 9) html += `<p class="sura-basmala">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>`;
+  verses.forEach(v=>{
+    html += `<div class="verse-item" data-vk="${l.sure}:${v.n}">
+      <p class="ar">${esc(v.a)} <span class="vn">${v.n}</span></p>
+      <p class="de"><span class="nr">${l.sure}:${v.n}</span> ${esc(v.d)}</p>
+      ${AUD.verseActions(l.sure, v.n)}
+    </div>`;
+  });
+  html += `<p class="sura-text-quelle">Arabischer Text: Uthmani-Mushaf · Übersetzung: Bubenheim &amp; Elyas. Jede Übersetzung ist eine Annäherung – die Lektion unten erklärt, was im Arabischen mehr steckt.</p>
+  </div></details></div>`;
+  return html;
+}
+function doneBar(id){
+  const d = isDone(id);
+  return `<div class="donebar">
+    <button class="${d?"undo":""}" data-done="${id}">${d?"Als nicht abgeschlossen markieren":"Lektion abschließen ✓"}</button>
+    <span style="color:var(--muted);font-size:.9rem">${d?"Māschā'Allāh – abgeschlossen. Teste dich: Kannst du die Sure jemandem in drei Sätzen erklären?":"Markiere die Lektion erst, wenn du sie jemandem in drei Sätzen erklären könntest."}</span>
+  </div>`;
+}
+
+/* ───────── Alle Suren ───────── */
+function viewSuren(){
+  let list = [...window.SUREN];
+  if(state.ort!=="alle") list = list.filter(s=>s.ort===state.ort);
+  if(state.q){ const q=state.q.toLowerCase();
+    list = list.filter(s=> s.name.toLowerCase().includes(q) || s.de.toLowerCase().includes(q) || String(s.n)===q ); }
+  list.sort(state.sort==="offb" ? (a,b)=>a.o-b.o : (a,b)=>a.n-b.n);
+  const hatLektion = new Set(ALLE_LEKTIONEN.map(l=>l.sure));
+  let html = `<div class="view"><h2 class="sec">Alle 114 Suren im Überblick</h2>
+  <p class="lead">Jede Sure mit Offenbarungsort, Reihenfolge der Offenbarung (Kairoer Chronologie) und ihrem Kernthema in einem Satz. Sortiere nach Offenbarung, um den roten Faden zu sehen.</p>
+  <div class="controls">
+    <input type="search" id="s-q" placeholder="Sure suchen (Name oder Nummer) …" value="${esc(state.q)}">
+    <select id="s-sort">
+      <option value="offb" ${state.sort==="offb"?"selected":""}>Sortierung: Offenbarung</option>
+      <option value="buch" ${state.sort==="buch"?"selected":""}>Sortierung: Buch (Mushaf)</option>
+    </select>
+    <select id="s-ort">
+      <option value="alle" ${state.ort==="alle"?"selected":""}>Mekka + Medina</option>
+      <option value="Mekka" ${state.ort==="Mekka"?"selected":""}>Nur Mekka (86)</option>
+      <option value="Medina" ${state.ort==="Medina"?"selected":""}>Nur Medina (28)</option>
+    </select>
+  </div><div class="card" style="padding-block:4px">`;
+  list.forEach(s=>{
+    html += `<div class="sure-row">
+      <div class="nr">${state.sort==="offb"?s.o+".":s.n+"."}</div>
+      <div class="nm"><b>${esc(s.name)}</b><span class="ar">${esc(s.arab)}</span><br><span class="de">${esc(s.de)} · ${s.v} Verse · ${state.sort==="offb"?"Sure "+s.n:"Offenbarung Nr. "+s.o}</span></div>
+      <div class="side"><span class="pill ${s.ort==="Mekka"?"mekka":"medina"}">${s.ort}</span><br>${hatLektion.has(s.n)?`<span class="lek-link" data-open="l${s.n}">zur Lektion →</span>`:""}</div>
+      <p class="thema">${esc(s.t)}</p>
+    </div>`;
+  });
+  html += `</div></div>`;
+  return html;
+}
+
+/* ───────── Brennpunkte ───────── */
+function viewBrenn(){
+  const B = window.BRENNPUNKTE;
+  let html = `<div class="view"><h2 class="sec">${esc(B.intro.titel)}</h2>${B.intro.text.map(p=>`<p>${esc(p)}</p>`).join("")}`;
+  B.gruppen.forEach(g=>{
+    html += `<h3>${esc(g.titel)}</h3><p class="lead">${esc(g.intro)}</p>`;
+    g.verse.forEach(v=>{
+      html += `<details class="bp"><summary><span>${esc(v.ref)}</span><span class="chev">＋</span></summary><div class="bp-inner">
+        <div class="versbox"><p class="ar">${esc(v.arab)}</p><p class="ue">„${esc(v.ueb)}“</p></div>
+        <div class="bp-label">Kurz gesagt</div><p>${esc(v.kurz)}</p>
+        <div class="bp-label">Kontext &amp; Offenbarungslage</div><p>${esc(v.kontext)}</p>
+        <div class="bp-label">Klassischer Tafsir</div><p>${esc(v.tafsir)}</p>
+        <div class="bp-label">Hukm – was rechtlich gilt</div><p>${esc(v.hukm)}</p>
+        <div class="bp-label">So erklärst du es</div><p>${esc(v.erklaeren)}</p>
+      </div></details>`;
+    });
+  });
+  html += `<div class="hinweis">Diese Darstellungen folgen dem klassischen Tafsir (aṭ-Ṭabarī, Ibn Kathīr, al-Qurṭubī) und – bei Rechtsfragen – der hanafitischen Schule (al-Dschaṣṣāṣ, al-Marġīnānī, Ibn ʿĀbidīn). Für verbindliche Einzelfragen: qualifizierte Gelehrte fragen.</div></div>`;
+  return html;
+}
+
+/* ───────── Glossar ───────── */
+function viewGlossar(){
+  const kats = [...new Set(window.GLOSSAR.map(g=>g.kat))];
+  const q = state.gq.toLowerCase();
+  let html = `<div class="view"><h2 class="sec">Glossar der Schlüsselbegriffe</h2>
+  <p class="lead">Die wichtigsten arabischen Begriffe mit Wurzel und einfacher Erklärung. Die Wurzel (meist drei Konsonanten) ist der Schlüssel zum Arabischen: Wer sie kennt, erkennt verwandte Wörter im ganzen Koran.</p>
+  <div class="controls"><input type="search" id="g-q" placeholder="Begriff suchen …" value="${esc(state.gq)}"></div>`;
+  kats.forEach(k=>{
+    const items = window.GLOSSAR.filter(g=>g.kat===k && (!q || g.tr.toLowerCase().includes(q) || g.erkl.toLowerCase().includes(q)));
+    if(!items.length) return;
+    html += `<div class="kat-label">${esc(k)}</div><div class="glos-grid">`;
+    items.forEach(g=>{
+      html += `<div class="glos-card"><div class="top"><span><span class="tr">${esc(g.tr)}</span> <span class="wz">· ${esc(g.wurzel)}</span></span><span class="ar">${esc(g.arab)}</span></div><p>${esc(g.erkl)}</p></div>`;
+    });
+    html += `</div>`;
+  });
+  html += `</div>`;
+  return html;
+}
+
+/* ───────── Quellen ───────── */
+function viewQuellen(){
+  const Q = window.QUELLEN;
+  let html = `<div class="view"><h2 class="sec">${esc(Q.titel)}</h2><p class="lead">${esc(Q.intro)}</p>`;
+  Q.gruppen.forEach(g=>{
+    html += `<h3>${esc(g.t)}</h3><div class="card" style="padding-block:6px">`;
+    g.items.forEach(i=>{ html += `<div class="q-item"><b>${esc(i.n)}</b><span>${esc(i.d)}</span></div>`; });
+    html += `</div>`;
+  });
+  html += `<div class="hinweis">${esc(Q.hinweis)}</div></div>`;
+  return html;
+}
+
+/* ───────── Duʿā ───────── */
+function getLearned(){ try{ return JSON.parse(localStorage.getItem("kik-dua-learned")||"[]"); }catch(e){ return []; } }
+function toggleLearned(id){ const d=getLearned(); const i=d.indexOf(id); if(i>=0)d.splice(i,1); else d.push(id); try{ localStorage.setItem("kik-dua-learned", JSON.stringify(d)); }catch(e){} }
+function viewDua(){
+  const D = window.DUAS;
+  if(!D) return `<div class="view"><h2 class="sec">Duʿā</h2><p class="lead">Die Duʿā-Sammlung konnte nicht geladen werden.</p></div>`;
+  const learned = getLearned();
+  const alle = D.kategorien.flatMap(k=>k.items);
+  const q = state.dq.trim().toLowerCase();
+  let html = `<div class="view"><h2 class="sec">Duʿā – Bittgebete aus Koran und Sunna</h2>
+    ${D.intro.map(p=>`<p class="lead">${esc(p)}</p>`).join("")}
+    <div class="progress" role="img" aria-label="Gelernt"><div style="width:${Math.round(100*learned.filter(x=>alle.some(a=>a.id===x)).length/alle.length)}%"></div></div>
+    <p class="lead" style="font-size:.9rem">${learned.filter(x=>alle.some(a=>a.id===x)).length} von ${alle.length} Duʿās als gelernt markiert</p>
+    <div class="controls"><input type="search" id="d-q" placeholder="Duʿā suchen (z. B. Schlaf, Reise, Sorge) …" value="${esc(state.dq)}"></div>
+    <div class="chips"><button type="button" class="chip ${state.dkat==="alle"?"on":""}" data-dkat="alle">Alle</button>${
+      D.kategorien.map(k=>`<button type="button" class="chip ${state.dkat===k.id?"on":""}" data-dkat="${k.id}">${esc(k.titel)}</button>`).join("")}</div>
+    <div class="toggles">
+      <label><input type="checkbox" id="d-uebung" ${state.duebung?"checked":""}> Übungsmodus (Arabisch erst auf Antippen zeigen)</label>
+      <label><input type="checkbox" id="d-offen" ${state.doffen?"checked":""}> Nur noch nicht gelernte</label>
+    </div>
+    <div id="dua-list">${duaList(q, learned)}</div></div>`;
+  return html;
+}
+function duaList(q, learned){
+  const D = window.DUAS;
+  let html = "", count = 0;
+  D.kategorien.forEach(k=>{
+    if(state.dkat!=="alle" && state.dkat!==k.id) return;
+    const items = k.items.filter(d=>{
+      if(state.doffen && learned.includes(d.id)) return false;
+      if(!q) return true;
+      return [d.titel,d.de,d.laut,d.nutzen||"",d.quelle,k.titel].join(" ").toLowerCase().includes(q);
+    });
+    if(!items.length) return;
+    count += items.length;
+    html += `<h3 class="dua-kat">${esc(k.titel)}</h3>${k.intro?`<p class="dua-kat-intro">${esc(k.intro)}</p>`:""}`;
+    items.forEach(d=>{
+      const isL = learned.includes(d.id);
+      const hide = state.duebung && !state.reveal[d.id];
+      html += `<div class="dua-card ${isL?"learned":""}" id="dua-${d.id}">
+        <div class="dua-top"><p class="dua-title">${esc(d.titel)}</p>${d.wdh?`<span class="dua-wdh">${esc(d.wdh)}</span>`:""}</div>
+        ${hide ? `<div class="dua-hidden" data-reveal="${d.id}" role="button" tabindex="0">Sprich die Duʿā zuerst aus dem Gedächtnis – dann antippen zum Prüfen</div>`
+               : `<p class="dua-ar">${esc(d.arab)}</p><p class="dua-laut">${esc(d.laut)}</p>`}
+        <p class="dua-de">„${esc(d.de)}“</p>
+        ${d.nutzen?`<p class="dua-nutzen">${esc(d.nutzen)}</p>`:""}
+        <p class="dua-q">Quelle: ${esc(d.quelle)}</p>
+        <div class="dua-foot">${d.ref?AUD.verseRangeActions(d.ref):"<span></span>"}
+          <button type="button" class="dua-learn" data-learn="${d.id}">${isL?"✓ Gelernt":"Als gelernt markieren"}</button></div>
+      </div>`;
+    });
+  });
+  if(!count) html = `<p class="lead">Keine Duʿā gefunden. Versuch einen anderen Suchbegriff oder wähle „Alle“.</p>`;
+  return html;
+}
+function bindDua(root){
+  root.querySelectorAll("[data-dkat]").forEach(b=>b.onclick=()=>{ state.dkat=b.dataset.dkat; render(); });
+  root.querySelectorAll("[data-learn]").forEach(b=>b.onclick=()=>{ toggleLearned(b.dataset.learn); const y=window.scrollY; render(); window.scrollTo(0,y); });
+  root.querySelectorAll("[data-reveal]").forEach(b=>{ const go=()=>{ state.reveal[b.dataset.reveal]=true; const y=window.scrollY; render(); window.scrollTo(0,y); }; b.onclick=go; b.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
+  const u = el("d-uebung"); if(u) u.onchange=()=>{ state.duebung=u.checked; state.reveal={}; render(); };
+  const o = el("d-offen"); if(o) o.onchange=()=>{ state.doffen=o.checked; render(); };
+  const dq = el("d-q"); if(dq) dq.oninput=()=>{ state.dq=dq.value; const list=el("dua-list"); list.innerHTML=duaList(state.dq.trim().toLowerCase(), getLearned()); bindDua(list); AUD.bind(list); };
+}
+
+/* ───────── Router ───────── */
+function render(){
+  renderTabs();
+  let html = "";
+  if(state.lesson==="grundlagen") html = viewGrundlagen();
+  else if(state.lesson){ const l = ALLE_LEKTIONEN.find(x=>"l"+x.sure===state.lesson); html = l ? viewLesson(l) : viewPfad(); }
+  else if(state.view==="pfad") html = viewPfad();
+  else if(state.view==="suren") html = viewSuren();
+  else if(state.view==="brenn") html = viewBrenn();
+  else if(state.view==="glossar") html = viewGlossar();
+  else if(state.view==="quellen") html = viewQuellen();
+  else if(state.view==="dua") html = viewDua();
+  else if(state.view==="offline") html = AUD.viewOffline();
+  el("main").innerHTML = html;
+  AUD.bind(el("main"));
+  if(state.view==="dua" && !state.lesson) bindDua(el("main"));
+  // Events
+  el("main").querySelectorAll("[data-open]").forEach(b=>{
+    const go = ()=>{ state.view="pfad"; state.lesson=b.dataset.open; render(); window.scrollTo(0,0); };
+    b.onclick = go;
+    b.onkeydown = e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } };
+  });
+  el("main").querySelectorAll("[data-back]").forEach(b=>b.onclick=()=>{ state.lesson=null; render(); window.scrollTo(0,0); });
+  el("main").querySelectorAll("[data-done]").forEach(b=>b.onclick=()=>{ toggleDone(b.dataset.done); render(); });
+  const sq = el("s-q"); if(sq){ sq.oninput = ()=>{ state.q=sq.value; renderListOnly(viewSuren, "s-q"); }; }
+  const ss = el("s-sort"); if(ss){ ss.onchange = ()=>{ state.sort=ss.value; render(); }; }
+  const so = el("s-ort"); if(so){ so.onchange = ()=>{ state.ort=so.value; render(); }; }
+  const gq = el("g-q"); if(gq){ gq.oninput = ()=>{ state.gq=gq.value; renderListOnly(viewGlossar, "g-q"); }; }
+}
+function renderListOnly(viewFn, focusId){
+  el("main").innerHTML = viewFn();
+  render.bindEventsOnly = true;
+  // re-bind by full render of events: simplest is to re-run binding via render(), but that would reset focus.
+  // So: re-attach minimal handlers here.
+  const sq = el("s-q"); if(sq){ sq.oninput = ()=>{ state.q=sq.value; renderListOnly(viewSuren,"s-q"); }; }
+  const ss = el("s-sort"); if(ss){ ss.onchange = ()=>{ state.sort=ss.value; render(); }; }
+  const so = el("s-ort"); if(so){ so.onchange = ()=>{ state.ort=so.value; render(); }; }
+  const gq = el("g-q"); if(gq){ gq.oninput = ()=>{ state.gq=gq.value; renderListOnly(viewGlossar,"g-q"); }; }
+  el("main").querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{ state.view="pfad"; state.lesson=b.dataset.open; render(); window.scrollTo(0,0); });
+  const f = el(focusId); if(f){ f.focus(); const v=f.value; f.value=""; f.value=v; }
+}
+/* Deep-Link: #pfad #suren #brenn #glossar #quellen #grundlagen #l-96 … */
+(function(){
+  const h = (location.hash||"").replace("#","");
+  if(["pfad","suren","dua","brenn","glossar","quellen","offline"].includes(h)) state.view=h;
+  else if(h==="grundlagen") state.lesson="grundlagen";
+  else if(/^l-\d+$/.test(h)){ const n=+h.slice(2); if(ALLE_LEKTIONEN.some(l=>l.sure===n)) state.lesson="l"+n; }
+  render();
+})();
+</script>
+
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}
+</script>
+</body>
+</html>
