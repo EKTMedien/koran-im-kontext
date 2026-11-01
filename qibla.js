@@ -37,8 +37,9 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 let ort = null;            // {lat, lon, name, quelle, zeit}
 let heading = null;        // geglättete Blickrichtung in Grad
 let anzeigeDrehung = 0;    // fortlaufender Drehwinkel für weiche Animation
-let kompassStatus = "aus"; // aus | wartet | aktiv | keiner | verweigert
+let kompassStatus = "aus"; // aus | wartet | aktiv | keiner | ohnewert | verweigert | fehler
 let listener = null, keinKompassTimer = null, warAusgerichtet = false;
+let diag = {erlaubnis: "–", ereignisse: 0, ohneWert: 0, quelle: "–", fehler: ""};
 
 function ladeOrt(){ try { const o = JSON.parse(localStorage.getItem(STORE) || "null"); if (o && isFinite(o.lat) && isFinite(o.lon)) ort = o; } catch (e) {} }
 function speichereOrt(o){ ort = o; try { localStorage.setItem(STORE, JSON.stringify(o)); } catch (e) {} }
@@ -47,33 +48,58 @@ function speichereOrt(o){ ort = o; try { localStorage.setItem(STORE, JSON.string
 function bildschirmWinkel(){
   return (screen.orientation && typeof screen.orientation.angle === "number") ? screen.orientation.angle : (window.orientation || 0);
 }
-function neuerWert(h){
+function neuerWert(h, quelle){
   h = norm360(h + bildschirmWinkel());
   heading = heading === null ? h : norm360(heading + norm180(h - heading) * 0.25);
+  diag.quelle = quelle;
   if (kompassStatus !== "aktiv") { kompassStatus = "aktiv"; zeichneStatus(); }
   aktualisiere();
 }
 // iPhone liefert webkitCompassHeading im Ereignis „deviceorientation“; Android/Chrome liefert absolute Werte
 // über „deviceorientationabsolute“ (alpha gegen den Uhrzeigersinn) – beide Quellen werden angehört.
 function onOrientierung(e){
-  if (typeof e.webkitCompassHeading === "number" && e.webkitCompassHeading >= 0) neuerWert(e.webkitCompassHeading);
-  else if (e.absolute && e.alpha !== null && e.alpha !== undefined) neuerWert(360 - e.alpha);
+  diag.ereignisse++;
+  if (typeof e.webkitCompassHeading === "number" && e.webkitCompassHeading >= 0) neuerWert(e.webkitCompassHeading, "iPhone-Kompass");
+  else if (e.absolute && e.alpha !== null && e.alpha !== undefined) neuerWert(360 - e.alpha, "absoluter Sensor");
+  else diag.ohneWert++;
+  if (diag.ereignisse % 15 === 1) zeigeDiagnose();
 }
-function onAbsolut(e){ if (e.alpha !== null && e.alpha !== undefined) neuerWert(360 - e.alpha); }
-
-async function starteKompass(){
+function onAbsolut(e){ diag.ereignisse++; if (e.alpha !== null && e.alpha !== undefined) neuerWert(360 - e.alpha, "absoluter Sensor"); }
+function hoereZu(){
+  listener = [["deviceorientation", onOrientierung]];
+  if ("ondeviceorientationabsolute" in window) listener.push(["deviceorientationabsolute", onAbsolut]);
+  listener.forEach(([typ, fn]) => window.addEventListener(typ, fn));
+  clearTimeout(keinKompassTimer);
+  keinKompassTimer = setTimeout(() => {
+    if (kompassStatus !== "wartet") return;
+    kompassStatus = diag.ereignisse > 0 ? "ohnewert" : "keiner";
+    zeichneStatus();
+  }, 4000);
+}
+// Muss direkt im Tipp-Handler laufen: iOS zeigt die Erlaubnis-Abfrage nur bei einer unmittelbaren Nutzeraktion.
+function starteKompass(){
+  const brauchtErlaubnis = typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission === "function";
+  let anfrage = null;
+  if (brauchtErlaubnis) {
+    try { anfrage = DeviceOrientationEvent.requestPermission(); }
+    catch (e) { diag.fehler = String(e && e.message || e); kompassStatus = "fehler"; zeichneStatus(); return; }
+  }
   stoppeKompass();
-  kompassStatus = "wartet"; zeichneStatus();
-  try {
-    if (typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission === "function") {
-      const r = await DeviceOrientationEvent.requestPermission();
-      if (r !== "granted") { kompassStatus = "verweigert"; zeichneStatus(); return; }
-    }
-    listener = [["deviceorientation", onOrientierung]];
-    if ("ondeviceorientationabsolute" in window) listener.push(["deviceorientationabsolute", onAbsolut]);
-    listener.forEach(([typ, fn]) => window.addEventListener(typ, fn));
-  } catch (e) { kompassStatus = "keiner"; zeichneStatus(); return; }
-  keinKompassTimer = setTimeout(() => { if (kompassStatus === "wartet") { kompassStatus = "keiner"; zeichneStatus(); } }, 3000);
+  diag = {erlaubnis: brauchtErlaubnis ? "wird angefragt" : "nicht nötig", ereignisse: 0, ohneWert: 0, quelle: "–", fehler: ""};
+  kompassStatus = "wartet"; zeichneStatus(); aktualisiere();
+  if (!anfrage) { hoereZu(); return; }
+  anfrage.then(r => {
+    diag.erlaubnis = r;
+    if (r === "granted") hoereZu();
+    else { kompassStatus = "verweigert"; zeichneStatus(); }
+  }).catch(e => { diag.fehler = String(e && e.message || e); kompassStatus = "fehler"; zeichneStatus(); });
+}
+function zeigeDiagnose(){
+  const el = document.getElementById("q-diag"); if (!el) return;
+  if (kompassStatus === "aus") { el.hidden = true; return; }
+  el.hidden = false;
+  el.textContent = `Technische Details: Erlaubnis: ${diag.erlaubnis} · Sensor-Messungen: ${diag.ereignisse}${diag.ohneWert ? ` (davon ohne Kompasswert: ${diag.ohneWert})` : ""} · Quelle: ${diag.quelle}` +
+    (heading !== null ? ` · Blickrichtung: ${Math.round(heading)}°` : "") + (diag.fehler ? ` · Fehler: ${diag.fehler}` : "");
 }
 function stoppeKompass(){
   if (listener) listener.forEach(([typ, fn]) => window.removeEventListener(typ, fn));
@@ -175,7 +201,7 @@ function zifferblatt(){
   const b = ort ? qiblaRichtung(ort.lat, ort.lon) : 0;
   return `<svg viewBox="0 0 300 300" class="q-svg" role="img" aria-label="Qibla-Kompass">
     <polygon points="150,2 141,20 159,20" class="q-zeiger"/>
-    <g id="q-dial" style="transform:rotate(${-anzeigeDrehung}deg)">
+    <g id="q-dial" transform="rotate(${(-anzeigeDrehung).toFixed(1)} 150 150)">
       <circle cx="150" cy="150" r="134" class="q-ring" id="q-ring"/>
       ${ticks}
       ${lbl("N", 0, "nord")}${lbl("O", 90)}${lbl("S", 180)}${lbl("W", 270)}
@@ -190,28 +216,34 @@ function zifferblatt(){
 }
 function zeichneStatus(){
   const el = document.getElementById("q-kompass-status"); if (!el) return;
+  const handy = navigator.maxTouchPoints > 0;
   const t = {
     aus: "",
     wartet: "Kompass startet … Halte das Handy flach vor dich.",
     aktiv: "",
-    keiner: "Dieses Gerät liefert keine Kompassdaten (z. B. Mac oder Laptop). Richte dich mit der Gradzahl unten aus: Norden ist oben auf der Scheibe.",
-    verweigert: "Der Zugriff auf den Kompass wurde nicht erlaubt. Tippe noch einmal auf „Kompass starten“ und erlaube „Bewegung und Ausrichtung“."
+    keiner: handy
+      ? "Es kommen keine Sensordaten an. Schließe die App ganz (vom unteren Rand nach oben wischen und die App wegschieben), öffne sie neu und tippe wieder auf „Kompass starten“. Hilft das nicht, öffne den Link einmal direkt in Safari und probiere es dort."
+      : "Dieses Gerät hat keinen Kompass (z. B. Mac oder Laptop). Richte dich mit der Gradzahl unten aus: Norden ist oben auf der Scheibe.",
+    ohnewert: "Dein Handy sendet Bewegungsdaten, aber keinen Kompasswert. Prüfe: Einstellungen → Datenschutz & Sicherheit → Ortungsdienste muss eingeschaltet sein. Bewege das Handy danach einige Male in Form einer liegenden Acht und tippe erneut auf „Kompass starten“.",
+    verweigert: "Der Zugriff auf „Bewegung und Ausrichtung“ wurde abgelehnt. iOS fragt danach erst wieder, wenn du die App ganz schließt (nach oben wischen, App wegschieben) und neu öffnest. Tippe dann auf „Kompass starten“ und wähle „Erlauben“.",
+    fehler: "Der Kompass konnte nicht gestartet werden. Tippe noch einmal direkt auf „Kompass starten“."
   }[kompassStatus];
   el.textContent = t;
   el.hidden = !t;
   const btn = document.getElementById("q-start");
-  if (btn) btn.textContent = kompassStatus === "aktiv" ? "Kompass läuft" : "Kompass starten";
+  if (btn) btn.textContent = kompassStatus === "aktiv" ? "Kompass läuft ✓" : kompassStatus === "wartet" ? "Kompass startet …" : "Kompass starten";
+  zeigeDiagnose();
 }
 function aktualisiere(){
   const dial = document.getElementById("q-dial"); if (!dial) return;
   if (heading !== null) {
     anzeigeDrehung += norm180(heading - norm360(anzeigeDrehung));
-    dial.style.transform = `rotate(${-anzeigeDrehung}deg)`;
+    dial.setAttribute("transform", `rotate(${(-anzeigeDrehung).toFixed(1)} 150 150)`);
   }
   const hinweis = document.getElementById("q-hinweis"), box = document.getElementById("q-box");
   if (!ort || !hinweis) return;
   const b = qiblaRichtung(ort.lat, ort.lon);
-  if (heading === null) { hinweis.textContent = `Qibla: ${Math.round(b)}° von Norden (${himmelsrichtung(b)})`; return; }
+  if (heading === null) { box.classList.remove("ok"); hinweis.textContent = `Qibla: ${Math.round(b)}° von Norden (${himmelsrichtung(b)})`; return; }
   const diff = norm180(b - heading);
   const ok = Math.abs(diff) <= TOLERANZ;
   box.classList.toggle("ok", ok);
@@ -238,7 +270,8 @@ function view(){
     <div class="q-box" id="q-box">
       ${zifferblatt()}
       <p class="q-hinweis" id="q-hinweis">${ort ? `Qibla: ${Math.round(b)}° von Norden (${himmelsrichtung(b)})` : "Bestimme zuerst deinen Standort."}</p>
-      <p class="audio-note" id="q-kompass-status" hidden></p>
+      <p class="audio-note q-status" id="q-kompass-status" hidden></p>
+      <p class="audio-note q-diag" id="q-diag" hidden></p>
       ${IN_APP ? `<div class="q-actions"><button type="button" class="audio-btn" id="q-start">Kompass starten</button>
         <button type="button" class="audio-btn ghost" id="q-gps">Standort per GPS bestimmen</button></div>` : ""}
     </div>
@@ -272,7 +305,7 @@ function neuZeichnen(){
 }
 function bind(root){
   zeichneStatus();
-  const s = root.querySelector("#q-start"); if (s) s.onclick = () => { starteKompass(); if (!ort) bestimmeStandort(); };
+  const s = root.querySelector("#q-start"); if (s) s.onclick = starteKompass;
   const g = root.querySelector("#q-gps"); if (g) g.onclick = bestimmeStandort;
   const sel = root.querySelector("#q-stadt");
   if (sel) sel.onchange = () => {
