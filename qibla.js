@@ -48,12 +48,13 @@ function speichereOrt(o){ ort = o; try { localStorage.setItem(STORE, JSON.string
 function bildschirmWinkel(){
   return (screen.orientation && typeof screen.orientation.angle === "number") ? screen.orientation.angle : (window.orientation || 0);
 }
+let bildGeplant = false;
 function neuerWert(h, quelle){
   h = norm360(h + bildschirmWinkel());
-  heading = heading === null ? h : norm360(heading + norm180(h - heading) * 0.25);
+  heading = heading === null ? h : norm360(heading + norm180(h - heading) * 0.35);
   diag.quelle = quelle;
   if (kompassStatus !== "aktiv") { kompassStatus = "aktiv"; zeichneStatus(); }
-  aktualisiere();
+  if (!bildGeplant) { bildGeplant = true; requestAnimationFrame(() => { bildGeplant = false; aktualisiere(); }); }
 }
 // iPhone liefert webkitCompassHeading im Ereignis „deviceorientation“; Android/Chrome liefert absolute Werte
 // über „deviceorientationabsolute“ (alpha gegen den Uhrzeigersinn) – beide Quellen werden angehört.
@@ -199,20 +200,24 @@ function zifferblatt(){
   }
   const lbl = (t, a, cls) => { const x = 150 + 102 * Math.sin(rad(a)), y = 150 - 102 * Math.cos(rad(a)) + 7; return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" class="q-lbl ${cls || ""}" text-anchor="middle">${t}</text>`; };
   const b = ort ? qiblaRichtung(ort.lat, ort.lon) : 0;
-  return `<svg viewBox="0 0 300 300" class="q-svg" role="img" aria-label="Qibla-Kompass">
-    <polygon points="150,2 141,20 159,20" class="q-zeiger"/>
-    <g id="q-dial" transform="rotate(${(-anzeigeDrehung).toFixed(1)} 150 150)">
-      <circle cx="150" cy="150" r="134" class="q-ring" id="q-ring"/>
-      ${ticks}
-      ${lbl("N", 0, "nord")}${lbl("O", 90)}${lbl("S", 180)}${lbl("W", 270)}
-      ${ort ? `<g transform="rotate(${b.toFixed(2)} 150 150)">
-        <line x1="150" y1="150" x2="150" y2="62" class="q-nadel"/>
-        <rect x="137" y="34" width="26" height="26" rx="2" class="q-kaaba"/>
-        <rect x="137" y="40" width="26" height="4" class="q-kaaba-band"/>
-      </g>` : ""}
-      <circle cx="150" cy="150" r="6" class="q-mitte"/>
-    </g>
-  </svg>`;
+  // Die Scheibe liegt in einem eigenen HTML-Element, das per CSS-Transform gedreht wird: Das übernimmt auf dem
+  // iPhone die Grafikeinheit, ohne die Grafik neu zu zeichnen – nur so läuft die Drehung flüssig.
+  return `<div class="q-kompass" role="img" aria-label="Qibla-Kompass">
+    <svg viewBox="0 0 24 20" class="q-zeiger-svg" aria-hidden="true"><polygon points="12,0 2,20 22,20" class="q-zeiger"/></svg>
+    <div id="q-dial" class="q-dial" style="transform:rotate(${(-anzeigeDrehung).toFixed(1)}deg)">
+      <svg viewBox="0 0 300 300" class="q-svg">
+        <circle cx="150" cy="150" r="134" class="q-ring" id="q-ring"/>
+        ${ticks}
+        ${lbl("N", 0, "nord")}${lbl("O", 90)}${lbl("S", 180)}${lbl("W", 270)}
+        ${ort ? `<g transform="rotate(${b.toFixed(2)} 150 150)">
+          <line x1="150" y1="150" x2="150" y2="62" class="q-nadel"/>
+          <rect x="137" y="34" width="26" height="26" rx="2" class="q-kaaba"/>
+          <rect x="137" y="40" width="26" height="4" class="q-kaaba-band"/>
+        </g>` : ""}
+        <circle cx="150" cy="150" r="6" class="q-mitte"/>
+      </svg>
+    </div>
+  </div>`;
 }
 function zeichneStatus(){
   const el = document.getElementById("q-kompass-status"); if (!el) return;
@@ -238,17 +243,21 @@ function aktualisiere(){
   const dial = document.getElementById("q-dial"); if (!dial) return;
   if (heading !== null) {
     anzeigeDrehung += norm180(heading - norm360(anzeigeDrehung));
-    dial.setAttribute("transform", `rotate(${(-anzeigeDrehung).toFixed(1)} 150 150)`);
+    dial.style.transform = `rotate(${(-anzeigeDrehung).toFixed(1)}deg)`;
   }
   const hinweis = document.getElementById("q-hinweis"), box = document.getElementById("q-box");
   if (!ort || !hinweis) return;
   const b = qiblaRichtung(ort.lat, ort.lon);
-  if (heading === null) { box.classList.remove("ok"); hinweis.textContent = `Qibla: ${Math.round(b)}° von Norden (${himmelsrichtung(b)})`; return; }
-  const diff = norm180(b - heading);
-  const ok = Math.abs(diff) <= TOLERANZ;
-  box.classList.toggle("ok", ok);
-  hinweis.textContent = ok ? "✓ Du schaust Richtung Qibla"
-    : diff > 0 ? `Dreh dich nach rechts – noch ${Math.round(diff)}°` : `Dreh dich nach links – noch ${Math.round(-diff)}°`;
+  let text, ok = false;
+  if (heading === null) text = `Qibla: ${Math.round(b)}° von Norden (${himmelsrichtung(b)})`;
+  else {
+    const diff = norm180(b - heading);
+    ok = Math.abs(diff) <= TOLERANZ;
+    text = ok ? "✓ Du schaust Richtung Qibla"
+      : diff > 0 ? `Dreh dich nach rechts – noch ${Math.round(diff)}°` : `Dreh dich nach links – noch ${Math.round(-diff)}°`;
+  }
+  if (hinweis.textContent !== text) hinweis.textContent = text;
+  if (box.classList.contains("ok") !== ok) box.classList.toggle("ok", ok);
   if (ok && !warAusgerichtet && navigator.vibrate) navigator.vibrate(60);
   warAusgerichtet = ok;
 }

@@ -208,7 +208,10 @@ body.kp-open{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 @media (max-width:760px){.q-wrap{grid-template-columns:minmax(0,1fr)}}
 .q-box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
 .q-box.ok{border-color:var(--ok);box-shadow:0 0 0 2px var(--ok)}
-.q-svg{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
+.q-kompass{position:relative;width:100%;max-width:320px;aspect-ratio:1/1;margin:0 auto}
+.q-dial{position:absolute;inset:14px 0 0 0;will-change:transform;transform-origin:50% 50%;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.q-svg{width:100%;height:100%;display:block}
+.q-zeiger-svg{position:absolute;top:0;left:50%;width:26px;height:22px;margin-left:-13px;z-index:2}
 .q-status{background:var(--soft);border-radius:8px;padding:8px 12px;color:var(--ink)}
 .q-diag{font-size:.75rem;word-break:break-word}
 .q-ring{fill:var(--soft);stroke:var(--line);stroke-width:2}
