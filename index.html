@@ -652,8 +652,23 @@ function renderListOnly(viewFn, focusId){
 
 <script>
 if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!hadController || document.getElementById("kik-update")) return;
+    const bar = document.createElement("div");
+    bar.id = "kik-update";
+    bar.setAttribute("role", "status");
+    bar.innerHTML = 'Neue Version der App verfügbar. <button type="button">Aktualisieren</button>';
+    bar.querySelector("button").onclick = () => location.reload();
+    document.body.appendChild(bar);
+  });
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").then(r => r.update()).catch(() => {}));
 }
 </script>
+<style>
+#kik-update{position:fixed;left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));z-index:30;max-width:min(92vw,520px);
+  background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.18);display:flex;gap:12px;align-items:center;font-size:.95rem}
+#kik-update button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:6px 14px;background:#fff;color:var(--accent-ink);cursor:pointer}
+</style>
 </body>
 </html>
