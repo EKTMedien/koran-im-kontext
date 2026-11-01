@@ -151,6 +151,9 @@ details.sura-text[open] summary{border-bottom:1px solid var(--line)}
 .v-actions{display:flex;gap:12px;align-items:center;margin-top:6px}
 .v-play{font:inherit;font-size:.85rem;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--accent);border-radius:999px;padding:2px 12px;min-height:32px}
 .v-play:hover{border-color:var(--accent)}
+a.v-play{text-decoration:none;display:inline-flex;align-items:center}
+.app-banner{background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:12px 16px;margin:16px auto 0;max-width:720px;text-align:left;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.app-banner p{margin:0;flex:1 1 100%;font-size:.95rem}
 .v-link{font-size:.82rem;color:var(--muted)}
 .verse-item.playing{background:var(--soft);box-shadow:inset 3px 0 0 var(--gold);border-radius:8px;padding-inline:10px}
 #kik-player{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
@@ -184,6 +187,7 @@ body.kp-open{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .dua-kat-intro{color:var(--muted);margin:0 0 12px;font-size:.95rem}
 .dua-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 12px;box-shadow:var(--shadow)}
 .dua-card.learned{border-color:var(--ok)}
+.dua-card.playing{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
 .dua-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
 .dua-title{font-weight:700;margin:0}
 .dua-wdh{font-size:.78rem;font-weight:700;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:1px 9px;white-space:nowrap}
@@ -568,7 +572,7 @@ function duaList(q, learned){
         <p class="dua-de">„${esc(d.de)}“</p>
         ${d.nutzen?`<p class="dua-nutzen">${esc(d.nutzen)}</p>`:""}
         <p class="dua-q">Quelle: ${esc(d.quelle)}</p>
-        <div class="dua-foot">${d.ref?AUD.verseRangeActions(d.ref):"<span></span>"}
+        <div class="dua-foot">${d.ref?AUD.verseRangeActions(d.ref, d.id):"<span></span>"}
           <button type="button" class="dua-learn" data-learn="${d.id}">${isL?"✓ Gelernt":"Als gelernt markieren"}</button></div>
       </div>`;
     });
@@ -632,7 +636,10 @@ function renderListOnly(viewFn, focusId){
   if(["pfad","suren","dua","brenn","glossar","quellen","offline"].includes(h)) state.view=h;
   else if(h==="grundlagen") state.lesson="grundlagen";
   else if(/^l-\d+$/.test(h)){ const n=+h.slice(2); if(ALLE_LEKTIONEN.some(l=>l.sure===n)) state.lesson="l"+n; }
+  else if(/^dua-[a-z]+\d+$/.test(h)) state.view="dua";
+  if(AUD.banner) document.querySelector("header.app").insertAdjacentHTML("beforeend", AUD.banner());
   render();
+  if(/^dua-[a-z]+\d+$/.test(h)){ const c=document.getElementById(h); if(c){ c.scrollIntoView({block:"start"}); window.scrollBy(0,-90); c.classList.add("playing"); } }
 })();
 </script>
 

@@ -3,6 +3,7 @@
 (function(){
 "use strict";
 const RECITER_NAME = "Mishary Alafasy";
+const PAGES_URL = "https://ektmedien.github.io/koran-im-kontext/";
 const BASE = "https://everyayah.com/data/Alafasy_64kbps/";
 const CACHE = "kik-audio-alafasy64-v1";
 const BYTES_PER_CHAR = 1207;
@@ -243,8 +244,8 @@ function setAllState(d, t){
 /* ───────── HTML-Bausteine für index.html ───────── */
 function suraToolbar(s){
   if (!AUDIO_OK) {
-    return `<div class="audio-bar"><a class="audio-btn" href="${quranCom(s)}" target="_blank" rel="noopener">▶ Auf quran.com anhören ↗</a>
-      <span class="audio-note">Vers für Vers hören und offline speichern kannst du in der Web-App-Version (siehe „Offline &amp; Audio“).</span></div>`;
+    return `<div class="audio-bar"><a class="audio-btn" href="${PAGES_URL}#l-${s}" target="_blank" rel="noopener">▶ In der App anhören</a>
+      <span class="audio-note">Öffnet diese Lektion in der Koran-App, wo du Vers für Vers hören und offline speichern kannst.</span></div>`;
   }
   return `<div class="audio-bar">
     <button type="button" class="audio-btn" data-play-sura="${s}">▶ Ganze Sure anhören</button>
@@ -253,13 +254,22 @@ function suraToolbar(s){
     <span class="audio-note">Rezitation: ${RECITER_NAME}</span></div>`;
 }
 function verseActions(s, v){
-  return `<div class="v-actions">${AUDIO_OK ? `<button type="button" class="v-play" data-play-v="${s}:${v}" aria-label="Vers ${s}:${v} anhören">▶</button>` : ""}<a class="v-link" href="${quranCom(s, v)}" target="_blank" rel="noopener">quran.com ↗</a></div>`;
+  if (!AUDIO_OK) return `<div class="v-actions"><a class="v-play" href="${PAGES_URL}#l-${s}" target="_blank" rel="noopener">▶ in der App</a></div>`;
+  return `<div class="v-actions"><button type="button" class="v-play" data-play-v="${s}:${v}" aria-label="Vers ${s}:${v} anhören">▶ Anhören</button><a class="v-link" href="${quranCom(s, v)}" target="_blank" rel="noopener">quran.com ↗</a></div>`;
 }
-function verseRangeActions(ref){
+function verseRangeActions(ref, duaId){
   // ref: "2:201" oder "2:285-286"
   const m = /^(\d+):(\d+)(?:-(\d+))?$/.exec(ref || ""); if (!m) return "";
   const s = +m[1], a = +m[2], b = +(m[3] || m[2]);
-  return `<div class="v-actions">${AUDIO_OK ? `<button type="button" class="v-play" data-play-range="${s}:${a}-${b}" aria-label="Koranvers ${esc(ref)} anhören">▶ Rezitation</button>` : ""}<a class="v-link" href="${quranCom(s, a)}" target="_blank" rel="noopener">quran.com ↗</a></div>`;
+  if (!AUDIO_OK) return `<div class="v-actions"><a class="v-play" href="${PAGES_URL}#${duaId ? "dua-" + duaId : "l-" + s}" target="_blank" rel="noopener">▶ In der App anhören</a></div>`;
+  return `<div class="v-actions"><button type="button" class="v-play" data-play-range="${s}:${a}-${b}" aria-label="Koranvers ${esc(ref)} anhören">▶ Rezitation</button><a class="v-link" href="${quranCom(s, a)}" target="_blank" rel="noopener">quran.com ↗</a></div>`;
+}
+function banner(){
+  if (AUDIO_OK) return "";
+  return `<div class="app-banner"><p><b>Hinweis:</b> Dies ist die Lese-Vorschau auf claude.ai. Hier kann nichts abgespielt und nichts offline gespeichert werden.
+    Zum <b>Hören Vers für Vers</b> und für die <b>Offline-Nutzung</b> auf iPhone und Mac öffne die Koran-App:</p>
+    <a class="audio-btn" href="${PAGES_URL}" target="_blank" rel="noopener">Koran-App öffnen</a>
+    <span class="audio-note copy-url"><code>${PAGES_URL}</code></span></div>`;
 }
 function bind(root){
   ensurePlayer();
@@ -278,13 +288,13 @@ function bind(root){
 
 /* ───────── Ansicht „Offline & Audio“ ───────── */
 function viewOffline(){
-  const PAGES_URL = "https://ektmedien.github.io/koran-im-kontext/";
   if (!AUDIO_OK) {
     return `<div class="view"><h2 class="sec">Offline &amp; Audio</h2>
-      <p class="lead">In dieser Version (claude.ai) lassen sich keine fremden Audiodateien abspielen. Jeder Vers hat deshalb einen Link zu quran.com, dort hörst du ihn sofort.</p>
-      <div class="card"><p style="margin-top:0"><b>Vers für Vers hören und alles offline nutzen</b> – auf Mac und iPhone – kannst du in der Web-App-Version:</p>
+      <p class="lead">Diese claude.ai-Vorschau kann technisch weder Audio abspielen noch offline laufen. Beides kann die Koran-App:</p>
+      <div class="card"><p style="margin-top:0"><a class="audio-btn" href="${PAGES_URL}" target="_blank" rel="noopener">Koran-App öffnen</a></p>
       <p class="copy-url"><code>${PAGES_URL}</code></p>
-      <p style="margin-bottom:0">Öffne die Adresse in Safari. Auf dem iPhone: Teilen → „Zum Home-Bildschirm“. Auf dem Mac: Ablage → „Zum Dock hinzufügen“. Danach lädt die App auch ohne Internet.</p></div></div>`;
+      <p><b>iPhone:</b> Adresse in Safari öffnen → Teilen-Symbol → „Zum Home-Bildschirm“. Danach immer über das neue Symbol starten.</p>
+      <p style="margin-bottom:0"><b>Mac:</b> Adresse in Safari öffnen → Menü „Ablage“ → „Zum Dock hinzufügen“.</p></div></div>`;
   }
   const used = OFFLINE_OK ? savedSuraCount() : 0;
   const total = Array.from({length: 114}, (_, i) => suraMB(i + 1)).reduce((a, b) => a + b, 0);
@@ -345,5 +355,5 @@ function refreshOfflineView(){
   }
 }
 
-window.KIK_AUDIO = {AUDIO_OK, OFFLINE_OK, suraToolbar, verseActions, verseRangeActions, bind, viewOffline, playSura, stop};
+window.KIK_AUDIO = {AUDIO_OK, OFFLINE_OK, PAGES_URL, suraToolbar, verseActions, verseRangeActions, banner, bind, viewOffline, playSura, stop};
 })();
