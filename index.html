@@ -182,6 +182,54 @@ body.kp-open{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .off-row:last-child{border-bottom:none}
 .off-name{font-weight:500;min-width:0;flex:1 1 160px}
 .copy-url code{font-size:1rem;word-break:break-all;background:var(--soft);padding:4px 8px;border-radius:6px}
+/* Gebetszeiten */
+.g-card{margin:0 0 8px}
+.g-kopf{display:flex;justify-content:space-between;gap:8px 16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px}
+.g-datum{margin:0;font-weight:700}
+.g-next{margin:0;color:var(--accent-ink);font-size:.95rem}
+.g-liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:6px 0 10px}
+@media (max-width:520px){.g-liste{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.g-row{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--surface)}
+.g-row .g-name{font-size:.9rem;color:var(--muted)}
+.g-row .g-ar{font-family:Amiri,serif;color:var(--gold);margin-left:4px}
+.g-row .g-zeit{font-size:1.45rem;font-weight:700;font-variant-numeric:tabular-nums}
+.g-row.jetzt{background:var(--soft)}
+.g-row.next{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.g-row.next .g-name{color:var(--accent-ink);font-weight:700}
+.g-monat{margin:8px 0}
+.g-monat summary{cursor:pointer;font-weight:700;color:var(--accent-ink)}
+.g-tabelle{overflow-x:auto;margin-top:8px}
+.g-tabelle table{border-collapse:collapse;font-size:.88rem;font-variant-numeric:tabular-nums;min-width:520px;width:100%}
+.g-tabelle th,.g-tabelle td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.g-tabelle th{color:var(--muted);font-weight:500}
+.g-tabelle tr.heute td{background:var(--soft);font-weight:700}
+/* Qibla */
+.q-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:760px){.q-wrap{grid-template-columns:minmax(0,1fr)}}
+.q-box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+.q-box.ok{border-color:var(--ok);box-shadow:0 0 0 2px var(--ok)}
+.q-svg{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
+#q-dial{transform-origin:150px 150px;transition:transform .15s linear}
+@media (prefers-reduced-motion: reduce){#q-dial{transition:none}}
+.q-ring{fill:var(--soft);stroke:var(--line);stroke-width:2}
+.q-box.ok .q-ring{stroke:var(--ok);stroke-width:4}
+.q-tick{stroke:var(--muted);stroke-width:1}
+.q-tick.lang{stroke:var(--ink);stroke-width:2}
+.q-lbl{font:700 18px "Alegreya Sans",system-ui,sans-serif;fill:var(--muted)}
+.q-lbl.nord{fill:#c0392b}
+.q-zeiger{fill:var(--accent)}
+.q-nadel{stroke:var(--gold);stroke-width:5;stroke-linecap:round}
+.q-kaaba{fill:#1b1b1b;stroke:var(--gold);stroke-width:1.5}
+.q-kaaba-band{fill:var(--gold)}
+.q-mitte{fill:var(--gold)}
+.q-hinweis{font-size:1.2rem;font-weight:700;margin:10px 0 4px;min-height:1.6em}
+.q-box.ok .q-hinweis{color:var(--ok)}
+.q-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px}
+.q-info select{font:inherit;width:100%;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);margin-top:4px}
+.q-label{display:block;font-size:.9rem;color:var(--muted);margin-top:10px}
+.q-werte{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-werte div{display:flex;flex-direction:column;gap:2px}
+.q-zahl{font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
 /* Duʿā */
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
 .chip{font:inherit;font-size:.86rem;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 13px}
@@ -284,6 +332,8 @@ button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visi
 <script src="suratext.js"></script>
 <script src="duas.js"></script>
 <script src="audio.js"></script>
+<script src="gebetszeiten.js"></script>
+<script src="qibla.js"></script>
 <script>
 "use strict";
 const ALLE_LEKTIONEN = ["LEKTIONEN","LEKTIONEN2","LEKTIONEN3","LEKTIONEN4","LEKTIONEN5","LEKTIONEN6","LEKTIONEN7",
@@ -297,6 +347,7 @@ const TABS = [
  {id:"pfad", label:"Lernpfad"},
  {id:"suren", label:"Alle 114 Suren"},
  {id:"dua", label:"Duʿā"},
+ {id:"qibla", label:"Gebet & Qibla"},
  {id:"brenn", label:"Brennpunkt-Verse"},
  {id:"glossar", label:"Glossar"},
  {id:"quellen", label:"Quellen"},
@@ -609,9 +660,13 @@ function render(){
   else if(state.view==="quellen") html = viewQuellen();
   else if(state.view==="dua") html = viewDua();
   else if(state.view==="offline") html = AUD.viewOffline();
+  else if(state.view==="qibla" && window.KIK_QIBLA) html = KIK_QIBLA.view();
+  const qiblaAktiv = state.view==="qibla" && !state.lesson && window.KIK_QIBLA;
+  if(!qiblaAktiv && window.KIK_QIBLA) KIK_QIBLA.leave();
   el("main").innerHTML = html;
   AUD.bind(el("main"));
   if(state.view==="dua" && !state.lesson) bindDua(el("main"));
+  if(qiblaAktiv) KIK_QIBLA.bind(el("main"));
   // Events
   el("main").querySelectorAll("[data-open]").forEach(b=>{
     const go = ()=>{ state.view="pfad"; state.lesson=b.dataset.open; render(); window.scrollTo(0,0); };
@@ -640,7 +695,8 @@ function renderListOnly(viewFn, focusId){
 /* Deep-Link: #pfad #suren #brenn #glossar #quellen #grundlagen #l-96 … */
 (function(){
   const h = (location.hash||"").replace("#","");
-  if(["pfad","suren","dua","brenn","glossar","quellen","offline"].includes(h)) state.view=h;
+  if(["pfad","suren","dua","qibla","brenn","glossar","quellen","offline"].includes(h)) state.view=h;
+  else if(h==="gebet") state.view="qibla";
   else if(h==="grundlagen") state.lesson="grundlagen";
   else if(/^l-\d+$/.test(h)){ const n=+h.slice(2); if(ALLE_LEKTIONEN.some(l=>l.sure===n)) state.lesson="l"+n; }
   else if(/^dua-[a-z]+\d+$/.test(h)) state.view="dua";
